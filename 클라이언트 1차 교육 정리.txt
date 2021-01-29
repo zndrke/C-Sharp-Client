@@ -1,0 +1,180 @@
+1. UserControl 
+	- UserControl의 목적
+	1) 윈폼에서 기본적으로 제공하는 control 외에 사용자가 원하는 control을 생성해서 사용
+	2) 다양한 속성값이 디폴트로 설정되어 사용자의 지정 없이 손쉬운 빌드 가능                    
+	
+2. Panel
+	1) Grid
+	- Column과 Row로 구성된 테이블 모양 레이아웃
+	- 최상단에 주로 사용됨
+	- 크기를 할당하는 방법은 
+		a) 명시적 할당
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "100"/>
+			<RowDefinition Height = "200"/>		
+		</Grid.RowDefintions>
+		
+		b) 비율 할당 (* 사용)
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width = "1*"/>
+			<ColumnDefinition Width = "2*"/>		
+		</Grid.ColumnDefinitions>
+
+	- 사용할 때는 좌표처럼 
+	<Button Name = "btn" Grid.Row = "0" Grid.Column = "0">btn</button> // (0,0)에 btn버튼 생성
+	
+	2) StackPanel
+	- 자식 요소를 가로 혹은 세로로 정렬하는 패널
+	- Orientation 값을 Vertical : 세로 / Horizontal : 가로
+	- 요소의 크기를 명시적으로 부여하지 않으면 자동조정
+
+	<StackPanel Orientation = "Horizontal">
+		<Button>btn1</Button>
+		<Button>btn2</Button>
+	</StackPanel>
+
+	- 왼쪽에서 부터 오른쪽으로 btn1과 btn2가 생성됨			
+
+	3) DockPanel
+	- 자식 요소들 사이의 추가 순서와 서로의 관계에 따라 할당됨
+	- DockPanel.Dock ="Left"	Left : 왼쪽 / Right : 오른쪽 / Top : 위 / Bottom : 아래
+
+	<DockPanel LastChildFill = "True">
+		<Border Height = "25" BackGround = "SkyBlue" Dockpanel.Dock = "Top">
+			<TextBlock>Top</TextBlock>
+		</Border>
+		<Border width = "200" BackGround = "PaleGreen" Dockpanel.Dock = "Left">
+			<TextBlock>Left</TextBlock>
+		</Border>
+	</DockPanel>
+
+	- 위쪽에 25 높이 만큼의 하늘색 Top 패널이 생성되고,
+	- 나머지 부분의 왼쪽에 200만큼의 초록색 Left 패널이 생성됨
+
+3. TextBox / TextBlock
+	1) TextBlock
+	- 문자열을 보여주는데 사용
+	- 텍스트마다 다른 폰트 색깔이나 배경, 크기 등 속성을  Run태그로 개별 커스터마이징 가능	
+	
+		<TextBlock>
+			<Run Text="A"/>
+			<Run Text="B" Background="Blue"/>
+			<Run Text="C"/>
+		</TextBlock>		
+
+	- 출력만 가능하여 편집 불가능
+
+	2) TextBox
+	- 문자열을 보여주는 기능과 편집하는 기능
+	- 모든 텍스트는 같은 폰트 색깔, 배경, 크기			
+	- 개별 텍스트에 다른 속성을 주고싶을 땐 RichTextBox
+	
+	string str = RichTextBox.rtf 하고 
+	str안의 문자를 편집하고
+	RichTextBox.rtf = str
+
+4. Event 와 EventHandler 
+	1) Event	
+	- 클래스 내에서 특정한 사건이 발생했을 때 호출되어야 하는 메소드 목록
+
+	2) EventHandler
+	- 이벤트가 발생했을 때 처리하기 위한 메소드
+	- 이벤트가 발생하면 이벤트 핸들러가 호출됨.	
+
+5. Property
+	- 변수의 내용은 private하게 숨기고 대신 get, set 메소드를 통해 변수에 접근
+	- 메소드를 통해 값을 입력받을 때, 원하지 않는 값을 거부할 수 있음
+
+	- 사용 방식
+	지정자 타입 이름 
+	{
+		get {return 값;}
+		set {값 변경;}
+	}
+
+	- 프로퍼티의 장점
+	: 메소드를 가지는 변수이므로 능동적으로 동작 (입력값 체크 등)
+
+6. namespace
+	- 중복되는 이름의 클래스가 사용되는 경우에 발생하는 에러를 방지
+	- 같은 폴더에 같은 이름은 불가능하지만, 다른 폴더에 같은 이름은 가능한 원리
+	- 네임스페이스 안에 네임스페이스도 중첩가능
+	
+	- using을 통해 namespace를 미리 선언하면 선언한 namespace의 클래스 사용가능
+	- using 별명 = namespace 를 선언하면 별명으로 namespace접근 가능
+
+7. 변수의 범주
+	1) 지역변수
+	- 메소드 내부의 특정한 {} 블록 내에 선언되는 변수
+	- 블록 내에서만 사용되고 초기값 대입이 없으면 쓰레기값을 가짐
+	- 메소드나 블록이 종료되면 자동으로 사라짐
+
+	2) 인스턴스 변수
+	- 클래스 선언문 내에 선언되며 클래스 타입의 객체에 소속됨
+	- 흔히 필드라고 부르는 멤버 변수
+
+	3) 정적변수
+	- 클래스 내에 static 키워드와 함꼐 선언, 클래스에 소속됨
+	- 객체가 생성되기 전에 이미 존재하며, 프로그램이 종료되어야 사라짐
+	- c언어의 전역변수와 비슷
+
+	4) 값인수
+	- 메소드의 인수로 선언되며 메소드가 호출될 때 생성
+	- 호출원에서 전달한 실인수의 값으로 초기화되며, 메소드가 리턴할때 소멸
+
+	5) 참조인수
+	- 값인수와 같되 ref라는 키워드를 붙임
+	- 실인수로 초기화되지 않고 싶인수를 가리키는 참조자로 초기화
+	- public void Set_A(ref int a)
+
+	6) 출력용 인수
+	- 참조인수와 같되 out 키워드를 사용
+	- 출력용 인수는 초기화하지 않아도 무방
+	- 대신 반드시 리턴하기 전에 대입하여 호출원으로 보내야함
+
+	public bool Get_A(string Name, out int A) {
+		int a=0;
+            	if (Name == 'out')
+                 		A= a;
+                 		return true;
+            	else return false;              
+            }
+
+	- Get_A 메소드 안에서 Name이 'out'일 때 A를 return하지 않고도 전달 할 수 있음
+	- return 타입과 상관없이 값을 전달 가능
+	
+
+8. 얕은복사 / 깊은복사
+ 	1) 얕은복사
+	- 객체의 참조를 복사, source의 참조값을 target의 객체에 대입
+	- source와 target은 동일한 객체를 가리키기 때문에 하나를 수정해도 같은 값을 출력
+	
+	2) 깊은복사
+	- 새로운 객체를 생성하여 source 객체의 값을 다른 복사본에 저장하고, target이 그 복사본을 가리키게 함
+	- 하나를 수정하면 수정한 객체만 값이 수정됨
+
+9. 지정자
+	1) private
+	- 클래스 내부에서만 접근 가능
+	
+	2) protected
+	- 클래스 내부와 파생된 클래스에서 접근가능
+
+	3) public
+	- 외부에서 마음대로 접근가능
+
+	4) internal
+	- 같은 어셈블리 내에서만 접근가능
+
+	5) protected internal
+	- 같은 어셈블리와 파생된 클래스에서 접근가능
+
+10. 오버로딩 / 오버라이딩
+	1) 오버로딩
+	- 메소드는 이름으로 구분되는데 이름이 같아도 파라미터가 다르면 다른 메소드로 정의 가능
+	- 단, 리턴타입만 다른 메소드는 불가
+
+	2) 오버라이딩
+	- 상위 클래스의 메소드를 하위클래스에서 상속받아 재정의하여 사용하는 것
+
+	

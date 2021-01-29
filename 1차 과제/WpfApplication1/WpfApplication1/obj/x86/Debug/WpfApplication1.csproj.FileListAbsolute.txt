@@ -1,0 +1,22 @@
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.baml
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\App.g.cs
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.GenerateResource.Cache
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.exe
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.pdb
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.exe
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.pdb
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\MainWindow.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\App.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1_MarkupCompile.cache
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.g.resources
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.Properties.Resources.resources
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\1차 과제\WpfApplication1\WpfApplication1\obj\x86\Debug\WpfApplication1.csproj.GenerateResource.Cache

@@ -1,0 +1,11 @@
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.exe
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\bin\Release\WpfApplication1.pdb
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MainWindow.baml
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\MainWindow.g.cs
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\App.g.cs
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1_MarkupCompile.cache
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.g.resources
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.Properties.Resources.resources
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.csproj.GenerateResource.Cache
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.exe
+D:\Users\cyshin\Documents\Visual Studio 2010\Projects\WpfApplication1\WpfApplication1\obj\x86\Release\WpfApplication1.pdb
