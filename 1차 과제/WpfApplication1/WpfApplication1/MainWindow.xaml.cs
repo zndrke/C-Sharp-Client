@@ -128,10 +128,10 @@ namespace WpfApplication1
                 e.Handled = !IsdNumeric(e.Text);         //e.handled = true
             }
         }
-        private bool IsdNumeric (string source)
+        private bool IsdNumeric (string sSource)
         {
             Regex regex = new Regex("[^0-9.-]+");
-            return !regex.IsMatch(source);
+            return !regex.IsMatch(sSource);
         }
     }
 }
