@@ -9,10 +9,10 @@
     </Window.Resources>
 
         <StackPanel>
-        <CheckBox x:Name="Check_Box" Margin="10" >Target TextBox ReadOnly</CheckBox>
-        <TextBox x:Name="src_Box" Width="480" Height="30" Padding="5" Margin="0,0,0,10"/>
-        <TextBox x:Name="tar_Box" Width="480" Height="30" Padding="5" 
-                 Text="{Binding ElementName=src_Box, Path=Text, Converter={StaticResource CommaConverter}}"
-                 IsReadOnly="{Binding ElementName=Check_Box,Path=IsChecked, Mode=OneWay}"></TextBox>
+        <CheckBox x:Name="chb_Tar" Margin="10" >Target TextBox ReadOnly</CheckBox>
+        <TextBox x:Name="tbx_Src" Width="480" Height="30" Padding="5" Margin="0,0,0,10"/>
+        <TextBox x:Name="tbx_Tar" Width="480" Height="30" Padding="5" 
+                 Text="{Binding ElementName=tbx_Src, Path=Text, Converter={StaticResource CommaConverter}}"
+                 IsReadOnly="{Binding ElementName=chb_Tar,Path=IsChecked, Mode=OneWay}"></TextBox>
     </StackPanel>
 </Window>
