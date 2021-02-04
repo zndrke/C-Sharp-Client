@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheOne.Windows</name>
+    </assembly>
+    <members>
+        <member name="T:TheOne.Windows.Media.VisualExtensions">
+            <summary>
+            Visual 개체의 확장 메서드 정의 클래스
+            </summary>
+        </member>
+        <member name="M:TheOne.Windows.Media.VisualExtensions.GetAppActiveWindow(System.Windows.Media.Visual)">
+            <summary>
+            애플리케이션의 활성 윈도우 핸들을 얻는다.
+            </summary>
+            <returns>활성 윈도우 핸들</returns>
+        </member>
+        <member name="M:TheOne.Windows.Media.VisualExtensions.SaveImage(System.Windows.Media.Visual,System.String)">
+            <summary>
+            Visual 개체를 이미지로 저장한다.
+            </summary>
+            <param name="saveFilePath">저장 경로</param>
+        </member>
+        <member name="T:TheOne.Windows.WinAPI.User32">
+            <summary>
+            user32.dll Win32 API DLL Wrapper 클래스
+            </summary>
+        </member>
+        <member name="T:TheOne.Windows.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TheOne.Windows.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TheOne.Windows.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:TheOne.Windows.Media.VisualHelper">
+            <summary>
+            WPF의 Visual 개체 관련 작업을 수행하는 클래스
+            </summary>
+        </member>
+        <member name="M:TheOne.Windows.Media.VisualHelper.FindParent``1(System.Windows.DependencyObject)">
+            <summary>
+            Visual Tree에서 전달받은 아이템의 부모를 찾는다.
+            </summary>
+            <typeparam name="T">쿼리 대상 아이템의 타입</typeparam>
+            <param name="child">쿼리 대상 아이템의 직접적 또는 간접적 자식</param>
+            <returns>타입 파라미터와 일치하는 첫번째 부모 아이템</returns>
+        </member>
+        <member name="T:TheOne.Windows.Documents.TargetAreaAdorner">
+            <summary>
+            대상 FrameworkElement 개체 영역을 표시하는 Adorner 클래스
+            </summary>
+        </member>
+        <member name="M:TheOne.Windows.Documents.TargetAreaAdorner.#ctor(System.Windows.UIElement)">
+            <summary>
+            생성자.
+            </summary>
+        </member>
+        <member name="F:TheOne.Windows.Documents.TargetAreaAdorner.adornedElement">
+            <summary>
+            Adorner가 적용될 대상 FrameworkElement 개체
+            </summary>
+        </member>
+    </members>
+</doc>

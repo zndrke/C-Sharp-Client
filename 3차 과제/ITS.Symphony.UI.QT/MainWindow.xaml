@@ -1,0 +1,105 @@
+﻿<base:RibbonWindowBase  
+    x:Class="ITS.Symphony.UI.QT.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:controls="clr-namespace:ITS.Symphony.Controls;assembly=ITS.Symphony.Controls"
+	xmlns:base="clr-namespace:ITS.Symphony.Common.Base;assembly=ITS.Symphony.Common"
+    xmlns:common="clr-namespace:ITS.Symphony.Common;assembly=ITS.Symphony.Common"
+	xmlns:cmCvt="clr-namespace:ITS.Symphony.Common.Converter;assembly=ITS.Symphony.Common"
+	xmlns:cmExt="clr-namespace:ITS.Symphony.Common.Extensions;assembly=ITS.Symphony.Common"
+    xmlns:itsEditors="clr-namespace:ITS.Symphony.Common.Editor;assembly=ITS.Symphony.Common"
+	xmlns:igDP="http://infragistics.com/DataPresenter"
+	xmlns:igRibbon="http://infragistics.com/Ribbon"
+	xmlns:igEditors="http://infragistics.com/Editors"
+    xmlns:igWindows="http://infragistics.com/Windows"
+    WindowStartupLocation="CenterScreen"
+    Closed="RibbonWindowBase_Closed">
+    <igRibbon:RibbonWindowContentHost x:Name="ribbonContent">
+        <igRibbon:RibbonWindowContentHost.Ribbon>
+            <igRibbon:XamRibbon x:Name="xrMain" DockPanel.Dock="Top">
+                <igRibbon:XamRibbon.Resources>
+                    <Style TargetType="{x:Type igRibbon:ButtonTool}" BasedOn="{StaticResource {x:Type igRibbon:ButtonTool}}">
+                        <Setter Property="Margin" Value="0"/>
+                        <Setter Property="Width" Value="70"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </igRibbon:XamRibbon.Resources>
+
+                <!-- Start Application Menu -->
+                <igRibbon:XamRibbon.ApplicationMenu>
+                    <igRibbon:ApplicationMenu x:Name="appMenu" Style="{DynamicResource SymphonyApplicationMenu}" Foreground="#FFaaaaaa" Image="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/symbol/sbYA.png">
+                        <igRibbon:ButtonTool x:Name="btlCloseAll" Caption="Close All" Tag="CloseAll" Click="AppMenu_Click" igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge" SmallImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbCloseAll.png" LargeImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbCloseAll.png">
+                            <igRibbon:ButtonTool.ToolTip>
+                                <igRibbon:XamRibbonScreenTip FooterSeparatorVisibility="Collapsed" Header="Close All">
+                                    <igRibbon:XamRibbonScreenTip.Content>
+                                        <TextBlock Text="Close All Tab Items." TextWrapping="Wrap" FontWeight="Normal" VerticalAlignment="Center"/>
+                                    </igRibbon:XamRibbonScreenTip.Content>
+                                </igRibbon:XamRibbonScreenTip>
+                            </igRibbon:ButtonTool.ToolTip>
+                        </igRibbon:ButtonTool>
+                        <igRibbon:SeparatorTool/>
+                        <igRibbon:ButtonTool x:Name="btlExit" Caption="Exit" Tag="Exit" Click="AppMenu_Click" igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge" SmallImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbExit.png" LargeImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbExit.png">
+                            <igRibbon:ButtonTool.ToolTip>
+                                <igRibbon:XamRibbonScreenTip FooterSeparatorVisibility="Collapsed" Header="Exit">
+                                    <igRibbon:XamRibbonScreenTip.Content>
+                                        <TextBlock Text="Exit Collateral Management." TextWrapping="Wrap" FontWeight="Normal" VerticalAlignment="Center"/>
+                                    </igRibbon:XamRibbonScreenTip.Content>
+                                </igRibbon:XamRibbonScreenTip>
+                            </igRibbon:ButtonTool.ToolTip>
+                        </igRibbon:ButtonTool>
+                        <igRibbon:ButtonTool x:Name="btlLogout" Caption="Logout" Tag="Logout" Click="AppMenu_Click" igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge" SmallImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbLogout.png" LargeImage="pack://application:,,,/ITS.Symphony.UI.MAIN;component/NewImages/ribbon/rbLogout.png">
+                            <igRibbon:ButtonTool.ToolTip>
+                                <igRibbon:XamRibbonScreenTip FooterSeparatorVisibility="Collapsed" Header="Logout">
+                                    <igRibbon:XamRibbonScreenTip.Content>
+                                        <TextBlock Text="Logout Symphony II." TextWrapping="Wrap" FontWeight="Normal" VerticalAlignment="Center"/>
+                                    </igRibbon:XamRibbonScreenTip.Content>
+                                </igRibbon:XamRibbonScreenTip>
+                            </igRibbon:ButtonTool.ToolTip>
+                        </igRibbon:ButtonTool>
+                        <!-- Recent Item 설정 -->
+                        <igRibbon:ApplicationMenu.RecentItems/>
+                        <igRibbon:ApplicationMenu.FooterToolbar>
+                            <igRibbon:ApplicationMenuFooterToolbar>
+                                <igRibbon:ButtonTool x:Name="btlFootToolbar" Caption="Close" Click="btlFootToolbar_Click"/>
+                            </igRibbon:ApplicationMenuFooterToolbar>
+                        </igRibbon:ApplicationMenu.FooterToolbar>
+                    </igRibbon:ApplicationMenu>
+                </igRibbon:XamRibbon.ApplicationMenu>
+                <!-- End Application Menu -->
+
+                <!-- Start Ribbon Menu -->
+                <igRibbon:XamRibbon.Tabs>
+                    <!-- Test Tab -->
+                    <igRibbon:RibbonTabItem x:Name="rtiTest1" Header="Tab1" Style="{DynamicResource SymphonyRibbonTabItem}" HorizontalAlignment="Center" Foreground="#FFaaaaaa">
+                        <igRibbon:RibbonGroup Caption="Group1" FontSize="11">
+                            <igRibbon:ToolHorizontalWrapPanel>
+                                <igRibbon:ButtonTool x:Name="btlTest1" Caption="Test1" Tag="Test1" igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge" SmallImage="{DynamicResource RibbonImgOpen}" LargeImage="{DynamicResource RibbonImgOpen}" Click="TestMenu_Click">
+                                    <igRibbon:ButtonTool.ToolTip>
+                                        <igRibbon:XamRibbonScreenTip FooterSeparatorVisibility="Collapsed" Header="Test1">
+                                            <igRibbon:XamRibbonScreenTip.Content>
+                                                <TextBlock Text="Test1" TextWrapping="Wrap" FontWeight="Normal" VerticalAlignment="Center"/>
+                                            </igRibbon:XamRibbonScreenTip.Content>
+                                        </igRibbon:XamRibbonScreenTip>
+                                    </igRibbon:ButtonTool.ToolTip>
+                                </igRibbon:ButtonTool>
+                                <igRibbon:ButtonTool x:Name="btlTest2" Caption="Test2" Tag="Test2" igRibbon:RibbonGroup.MaximumSize="ImageAndTextLarge" SmallImage="{DynamicResource RibbonImgOpen}" LargeImage="{DynamicResource RibbonImgOpen}" Click="TestMenu_Click">
+                                    <igRibbon:ButtonTool.ToolTip>
+                                        <igRibbon:XamRibbonScreenTip FooterSeparatorVisibility="Collapsed" Header="Test2">
+                                            <igRibbon:XamRibbonScreenTip.Content>
+                                                <TextBlock Text="Test2" TextWrapping="Wrap" FontWeight="Normal" VerticalAlignment="Center"/>
+                                            </igRibbon:XamRibbonScreenTip.Content>
+                                        </igRibbon:XamRibbonScreenTip>
+                                    </igRibbon:ButtonTool.ToolTip>
+                                </igRibbon:ButtonTool>
+                            </igRibbon:ToolHorizontalWrapPanel>
+                        </igRibbon:RibbonGroup>
+                    </igRibbon:RibbonTabItem>
+                </igRibbon:XamRibbon.Tabs>
+            </igRibbon:XamRibbon>
+            <!-- End Ribbo Menu -->
+            
+        </igRibbon:RibbonWindowContentHost.Ribbon>
+        <common:MainTabControl x:Name="mtcMain"/>
+    </igRibbon:RibbonWindowContentHost>
+</base:RibbonWindowBase >
