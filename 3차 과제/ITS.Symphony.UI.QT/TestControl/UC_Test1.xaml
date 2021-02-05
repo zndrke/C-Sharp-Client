@@ -18,11 +18,13 @@
         </Grid.Resources>
         
         <igDP:XamDataGrid Name="xamDataGrid1">
+            <igDP:XamDataGrid.FieldSettings>
+                <igDP:FieldSettings AllowRecordFiltering="False"/>
+            </igDP:XamDataGrid.FieldSettings>
             <igDP:XamDataGrid.FieldLayouts>
                 <igDP:FieldLayout>
                     <igDP:FieldLayout.Fields>
-                        
-                        <igDP:UnboundField Name="cbxCheck" Label="체크박스" AllowEdit="True">
+                        <igDP:UnboundField Name="bCheck" Label="체크박스" AllowEdit="True">
                             <igDP:UnboundField.Settings>
                                 <igDP:FieldSettings
                                 EditorType="{x:Type igEditors:XamCheckEditor}"/>
@@ -31,7 +33,7 @@
                         <igDP:Field Name="sTitle" Label="제목" />
                         <igDP:Field Name="sWriter" Label="저자" />
                         <igDP:Field Name="sPublisher" Label="출판사" />
-                        <igDP:UnboundField BindingPath="iPage" Name="iPage" Label="페이지수" Converter="{StaticResource StringFormatConverter}" ConverterParameter="iPage"/>
+                        <igDP:UnboundField BindingPath="iPage" Name="iPage" Label="페이지수"  Converter="{StaticResource StringFormatConverter}" ConverterParameter="iPage"/>
                         <igDP:DateTimeField Name="sDate" Label="출판일" >
                             <igDP:DateTimeField.Settings>
                                 <igDP:FieldSettings AllowEdit="True"/>
@@ -52,6 +54,6 @@
                 </igDP:FieldLayout>
             </igDP:XamDataGrid.FieldLayouts>
         </igDP:XamDataGrid>
-        <Button x:Name="ShowFilter" Content="필터보이기" Click="ShowFilter_Click" Width="100" Height="30"></Button>
+        <Button x:Name="ShowFilter" Content="필터보이기" Click="ShowFilter_Click" Width="100" Height="30" HorizontalAlignment="Left"/>
     </Grid>
 </base:UserControlBase>

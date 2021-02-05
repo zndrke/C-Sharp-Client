@@ -45,34 +45,23 @@ namespace ITS.Symphony.UI.QT.TestControl
     }
     public partial class UC_Test1 : UserControlBase
     {
-        
         public UC_Test1 ()
         {
             InitializeComponent();
-
             this.xamDataGrid1.Initialize();
 
             ObservableCollection<Book_Data> datasource = new ObservableCollection<Book_Data>();
 
-            datasource.Add(new Book_Data(false,"WPF 프로그래밍", "이", "가메", 1, "20101213", "이것은", Category.경제, 0.3));
+            datasource.Add(new Book_Data(true,"WPF 프로그래밍", "이", "가메", 1, "20101213", "이것은", Category.경제, 0.3));
             datasource.Add(new Book_Data(false,"C#", "김", "YH", 1000, "20140914", "공부", Category.에세이, 0.1085));
             datasource.Add(new Book_Data(false,"Hello", "김", "우리", 999, "20140911", "인사",Category.소설, 1));
             datasource.Add(new Book_Data(false,"OOP", "게리", "Relly", 22012, "19121216", "객체지향", Category.문학, - 0.702));
             this.xamDataGrid1.DataSource = datasource;
-            
         }
-        private XamDateTimeEditor CreateDateEditor ()
-        {
-            XamDateTimeEditor editor = new XamDateTimeEditor();
-            editor.AutoFillDate = AutoFillDate.MonthAndYear;
-            editor.DropDownButtonDisplayMode = DropDownButtonDisplayMode.Always;
-            editor.Mask = "{yyyy/mm/dd}";
-            return editor;
-        }
-
+    
         public class Book_Data
         {
-            public bool cbxCheck { get; set; }
+            public bool bCheck { get; set; }
             public string sTitle { get; set; }
             public string sWriter { get; set; }
             public string sPublisher { get; set; }
@@ -82,10 +71,9 @@ namespace ITS.Symphony.UI.QT.TestControl
             public Category eCategory { get; set; }
             public double dRate { get; set; }
 
-
-            public Book_Data (bool cbxCheck, string sTitle, string sWriter, string sPublisher, int iPage, string sDate, string sInfo, Category eCategory, double dRate)
+            public Book_Data (bool bCheck, string sTitle, string sWriter, string sPublisher, int iPage, string sDate, string sInfo, Category eCategory, double dRate)
             {
-                this.cbxCheck = cbxCheck;
+                this.bCheck = bCheck;
                 this.sTitle = sTitle;
                 this.sWriter = sWriter;
                 this.sPublisher = sPublisher;
@@ -99,16 +87,17 @@ namespace ITS.Symphony.UI.QT.TestControl
 
         private void ShowFilter_Click (object sender, RoutedEventArgs e)
         {
-            //필터 보이기
-
+            if (this.xamDataGrid1.FieldSettings.AllowRecordFiltering == false) {   
+                this.xamDataGrid1.FieldSettings.AllowRecordFiltering = true;
+            } else {
+                this.xamDataGrid1.FieldSettings.AllowRecordFiltering = false;
+            }     
         }
-
     }
     public class StringFormatConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            
             string sStr = value.ToString();
             String sResult="";
             if(parameter.Equals("iPage")) {
@@ -118,7 +107,6 @@ namespace ITS.Symphony.UI.QT.TestControl
                 var item = double.Parse(sStr);
                 sResult = item.ToString("P");
             }
-
             return sResult;
         }
  

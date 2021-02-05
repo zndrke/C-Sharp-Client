@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\cyshin\Desktop\클라이언트\3차 과제\ITS.Symphony.UI.QT\obj\x86\Debug\
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\
 ITS.Symphony.UI.QT
 none
 false
 DEBUG;TRACE
-C:\Users\cyshin\Desktop\클라이언트\3차 과제\ITS.Symphony.UI.QT\App.xaml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\App.xaml
 41434684271
 
 101666864611
-86-1489256852
+862053639901
 LoginWin.xaml;MainWindow.xaml;TestControl\UC_Test1.xaml;TestControl\UC_Test2.xaml;
 
-True
+False
 

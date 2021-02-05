@@ -324,6 +324,3 @@ C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\I
 C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
 C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.lref
-C:\Users\cyshin\Desktop\클라이언트\3차 과제\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
-C:\Users\cyshin\Desktop\클라이언트\3차 과제\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
-C:\Users\cyshin\Desktop\클라이언트\3차 과제\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
