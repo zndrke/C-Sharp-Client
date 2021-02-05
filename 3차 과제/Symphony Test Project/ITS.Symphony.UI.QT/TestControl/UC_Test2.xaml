@@ -1,0 +1,16 @@
+﻿<base:UserControlBase 
+    x:Class="ITS.Symphony.UI.QT.TestControl.UC_Test2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:igDP="http://infragistics.com/DataPresenter"
+    xmlns:igEditors="http://infragistics.com/Editors"
+    xmlns:itsEditor="clr-namespace:ITS.Symphony.Common;assembly=ITS.Symphony.Common"
+	xmlns:cmExt="clr-namespace:ITS.Symphony.Common.Extensions;assembly=ITS.Symphony.Common"
+	xmlns:cmCvt="clr-namespace:ITS.Symphony.Common.Converter;assembly=ITS.Symphony.Common"
+	xmlns:base="clr-namespace:ITS.Symphony.Common.Base;assembly=ITS.Symphony.Common"
+	xmlns:cc="clr-namespace:ITS.Symphony.Controls;assembly=ITS.Symphony.Controls">
+    <Grid>
+
+    </Grid>
+</base:UserControlBase>

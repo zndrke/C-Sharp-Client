@@ -1,0 +1,28 @@
+﻿<Application x:Class="ITS.Symphony.UI.QT.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="LoginWin.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/PresentationFramework.Aero;V3.0.0.0;31bf3856ad364e35;component/themes/aero.normalcolor.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Window/ColorsSymphony.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Window/FrameElementsSymphony.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Window/FrameStyleSymphony.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/ConverterResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/XamDateTimeEditorResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/CommonResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/XamCommonResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/SymphonyTheme.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Default/ColorResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Default/DataGridColorResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/Default/XamControlColorResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/ControlResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/DataGridResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/XamControlResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/XamComboEditorResource.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ITS.Symphony.Resources;component/G2Theme/SymphonyG2Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

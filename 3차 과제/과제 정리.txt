@@ -1,0 +1,74 @@
+1. XamDataGrid
+	- 표 형태
+	
+	C#
+	1) 클래스를 생성하고, 클래스의 필드에 그리드의 레이블에 바인딩할 프로퍼티를 생성 
+	2) XamDataGrid1.Initialize(); 				//생성한 xamdatagrid 를 초기화 함
+	- initialize()는 확장메소드로 구현한 함수. Symphony의 스타일에 맞게 초기화함
+	3) ObservableCollection 배열 생성 & 데이터 삽입	// XamDataGrid는 배열 형태로 데이터를 저장
+	4) XamDataGrid1.DataSource = 생성한 배열 		// XamDataGrid의 데이터 소스에 배열 넘겨줌
+
+	
+2. ObservableCollection
+	- XamDataGrid의 데이터는 List를 쓸 때 ObservableCollection 사용
+	- UI 와 바인딩에 특화된 Collection 
+	
+3. 그리드의 필드
+	public bool bCheck { get; set; }		//체크박스
+            public string sTitle { get; set; }		//제목
+            public string sWriter { get; set; }		//저자
+            public string sPublisher { get; set; }		//출판사
+            public int iPage { get; set; }			//페이지수		
+            public string sDate { get; set; }		//출판일
+            public string sInfo { get; set; }		//설명
+            public Category eCategory { get; set; }	//분류
+            public double dRate { get; set; }		//판매율
+
+4. 그리드의 각 필드 분석
+	1) 체크박스
+	- 필드 데이터는 bool로 선언
+	- UnboundField는 바운딩하는 프로퍼티 타입과 같지 않아도 됨
+	- AllowEdit 프로퍼티를 True로 하여 수정 가능하게 함
+
+	2) 제목, 저자, 출판사, 설명 
+	- 필드 데이터는 string
+	
+	3)  페이지 수
+	- 필드 데이터는 int
+	- UnboundField => 바인딩 데이터는 int, convert 후 데이터는 string
+	- Converter StringFormatConverter에 파라미터로 iPage를 넘김
+	- Converter에서 파라미터가 iPage이면 Tostring("#,##0")으로 3자리마다 콤마를 찍음
+	- 필드 데이터(int) -> Convert파라미터 value(object) -> object.Tostring(string) -> int.parse(int) -> Tostring("#,##0")(string)
+
+	4) 출판일
+	- 필드 데이터는 "yyyyMMdd"형식의 string
+	- DateTimeField
+	- FieldSetting에 AllowEdit 프로퍼티를 true로 하여 수정이 가능하도록 함
+	
+	5) 분류
+	- 필드 데이터는 enum
+	public enum Category
+	    {
+	        경제,
+	        에세이,
+	        소설,
+	        문학,
+	        IT
+	    }
+	- AllowEdit 프로퍼티를 True로 하여 세모를 클릭하면 enum의 내용이 보이게 함
+
+	6) 판매율
+	- 필드 데이터는 double
+	- UnboundField => 바인딩 데이터는 double, convert 후 데이터는 string
+	- Converter StringFormatConverter에 파라미터로 dRate를 넘김
+	- Converter에서 파라미터가 dRate이면 Tostring("P")로 퍼센트로 만듦
+	- 필드 데이터(double) -> Convert파라미터 value(object) -> object.Tostring(string) -> int.parse(double) -> Tostring("P")(string)
+
+5. 필터 보이기
+	- XamDatagrid.FieldSettings에 AllowRecodFiltering 프로퍼티를 false로 선언함
+	- Xaml에 버튼을 생성하고 Click이벤트 ShowFilter_Click를 만듦
+	- 버튼을 클릭했을 때 xamDataGrid1.FieldSettings.AllowRecordFiltering 가 !=true 이면 => true
+	- 클릭했을 때 true이면 false
+
+  
+	

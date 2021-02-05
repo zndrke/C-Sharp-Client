@@ -1,0 +1,2233 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<doc>
+    <assembly>
+        <name>OneCorLib</name>
+    </assembly>
+    <members>
+        <member name="N:TheOne">
+            <summary>TheOne네임스페이스에서는 NeoDEEX 프레임워크 내부에서 발생하는 기본 예외 클래스를 포함하고 있습니다.</summary>
+        </member>
+        <member name="T:TheOne.LicenseValidator">
+            <summary>라이센스 유효성을 검사하는 클래스 입니다.  NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+        </member>
+        <member name="T:TheOne.TheOneException">
+            <summary>NeoDEEX Framework에서 발생하는 다양한 예외에 대한 기본 클래스를 정의합니다.</summary>
+            <remarks>    TheOneException 클래스는 메시지와 오류코드 정보를 갖습니다. 오류 코드 속성은 일반적인 의미의     오류코드입니다. 이 클래스를 상속받은 DBException의 경우, 오류코드는 데이터베이스가 발생한 오류코드이며,     이 클래스를 상속받은 다른 예외 클래스에서는 다른 의미의 코드를 갖을 수 있음에 유의해야 합니다.     이 클래스의 인스턴스를 직접 만들어 사용하는 것은 가급적 피하는 것이 좋으며 보다 구체적인 예외     클래스를 상속받아 사용해야만 합니다. 예를들어, 인사 시스템에서는 TheOneException에서 상속받은     (가칭) XXXException 클래스를 정의하고 이 클래스에 인사 시스템에서 사용하는 오류 코드 등의 정의해서     사용하는 것이 좋습니다.</remarks>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor">
+            <summary>TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor">
+            <summary>TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>기본 생성자를 이용하여 초기화 된 TheOneException 객체의 Message 속성은 빈 문자열(String.Empty) 이다.</remarks>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.Int32)">
+            <summary>지정된 오류 코드를 사용하여 TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="code">오류 코드 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Serialize된 데이터를 사용하여 TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="info">Serialize된 객체 데이터를 유지하는 객체 입니다.</param>
+            <param name="context">소스 또는 대상에 대한 컨텍스트 정보 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.String)">
+            <summary>지정된 오류 메시지를 사용하여 TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.String,System.Exception)">
+            <summary>지정된 오류 메시지와 예외 객체를 사용하여 TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지 입니다.</param>
+            <param name="ie">예외 객체 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.String,System.Int32)">
+            <summary>지정된 오류 메시지와 오류코드를 사용하여 TheOneException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지 입니다.</param>
+            <param name="code">오류 코드 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>지정된 오류 메시지, 오류 코드, 예외객체를 사용하여 TheOneException클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지 입니다.</param>
+            <param name="code">오류 코드 입니다.</param>
+            <param name="innerException">예외 객체 입니다.</param>
+        </member>
+        <member name="M:TheOne.TheOneException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>예외에 관한 정보를 SerializationInfo에 설정합니다.</summary>
+            <remarks>Serialization 과정에서 Serializer는 이 메서드를 호출하여 객체의 데이터를 스트림에 기록하도록 요구한다.</remarks>
+            <param name="info">throw되는 예외에 대해 Serialize된 객체 데이터를 보유하는 SerializationInfo 입니다.</param>
+            <param name="context">소스 또는 대상에 대한 컨텍스트 정보를 포함하는 StreamingContext 입니다.</param>
+        </member>
+        <member name="P:TheOne.TheOneException.Code">
+            <summary>오류 코드를 가져오거나 설정합니다. 예외 코드는 TheOneException 이 기본적으로 제공하는 부가정보입니다.</summary>
+            <remarks>TheOneException을 상속받는 DBException에서는 이 변수에 DB 에러코드를 세팅합니다. 어플리케이션에서 정의하는 에러코드는 DB 에러코드와 겹치지 않도록 세팅합니다.</remarks>
+        </member>
+        <member name="P:TheOne.TheOneException.Message">
+            <summary>현재 예외에 대한 오류 코드와 메세지를 가져온다.(Exception에서 상속됨) 새롭게 정의되는 오류 메시지입니다.</summary>
+            <remarks>base 생성자를 바로 호출하지 않고 따로 이 변수를 선언하는 이유는, 메시지 구성에 유연성을 부가하기 위해서입니다.</remarks>
+        </member>
+        <member name="F:TheOne.TheOneException.GenericSecurityErrorCode">
+            <summary>일반적인 보안 오류 코드를 정의하는 상수입니다.</summary>
+        </member>
+        <member name="F:TheOne.TheOneException.GenericServerErrorCode">
+            <summary>서버측 Generic 오류 코드를 정의하는 상수입니다.</summary>
+        </member>
+        <member name="N:TheOne.Configuration">
+            <summary>TheOne.Configuration 네임스페이스에는 NeoDEEX 구성 데이터를 처리하는데 사용되는 프로그래밍 모델을 제공하는 형식이 포함되어 있습니다. NeoDEEX 구성 데이터는 &lt;databaseSection&gt; 요소와 &lt;logSection&gt; 요소로 구성됩니다. &lt;databaseSection&gt; 요소를 사용하는 자세한 방법은 TheOne.Data 네임스페이스의 설명을 참조하고, &lt;logSection&gt; 요소를 사용하는 자세한 방법은 TheOne.Diagnostics 네임스페이스의 설명을 참조하십시오.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.NamedItemInterface">
+            <summary>Name 속성을 가지는 인터페이스입니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.NamedItemInterface.Name">
+            <summary>이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.AppSection">
+            <summary>NeoDEEX 프레임워크 내부에서 어플리케이션의 고유 설정 정보를 사용하기 위한 이름/값 쌍의 사용자 정의 문자열 컬렉션을 관리합니다.</summary>
+            <remarks>AppSectionFactory은 프레임워크 외부에서 사용자 정의 설정 정보를 사용할 수 있도록 AppSection 속성을 제공합니다. 각 애플리케이션이 고유의 설정 정보를 사용하고자 할 때 appSection에 키와 값을 정의하고 AppSectionFactory 클래스의 AppSection 속성을 통해서 아이템을 사용할 수 있습니다. AppSectionFactory 객체는 NeoDEEX 구성 요소 파일의 내용을 읽어와서 구성되며 키/값 쌍의 컬렉션을 가지는 AppSection 객체를 제공합니다. 프로그램 레벨에서 아이템 값의 변경은 가능하지만 이러한 작업이 실제 NeoDEEX 구성 요소 파일을 변경하지는 않습니다. 또한 NeoDEEX 구성 요소 파일이 변경되면 AppSectionFactory 객체는 새로운 값으로 초기화화 됩니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.AppSection.#ctor">
+            <summary>AppSection 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.AppSection.Item">
+            <summary>지정한 이름에 해당하는 문자열을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.AppSection.Item(System.String)">
+            <summary>지정한 이름에 해당하는 문자열을 가져옵니다.</summary>
+            <remarks>매개변수 name은 대소문자를 구분한다.</remarks>
+            <param name="name">아이템의 이름입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.AppSection.Item(System.Int32)">
+            <summary>지정한 인덱스에 해당하는 문자열을 가져옵니다.</summary>
+            <param name="index">아이템의 인덱스입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.AppSection.Items">
+            <summary>아이템 목록을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.AppSectionFactory">
+            <summary>AppSection 속성으로 이름/값 쌍의 사용자 정의 문자열 컬렉션을 관리하는 Factory 클래스입니다.</summary>
+            <remarks>AppSectionFactory은 프레임워크 외부에서 사용자 정의 설정 정보를 사용할 수 있도록 AppSection 속성을 제공합니다. 각 애플리케이션이 고유의 설정 정보를 사용하고자 할 때 appSection에 키와 값을 정의하고 AppSectionFactory 클래스의 AppSection 속성을 통해서 아이템을 사용할 수 있습니다. AppSectionFactory 객체는 NeoDEEX 구성요소 파일의 내용을 읽어와서 구성되며 키/값 쌍의 컬렉션을 가지는 AppSection 객체를 제공합니다. 프로그램 레벨에서 아이템 값의 변경은 가능하지만 이러한 작업이 실제 NeoDEEX 구성요소 파일을 변경하지는 않습니다. 또한 NeoDEEX 구성요소 파일이 변경되면 AppSectionFactory 객체는 새로운 값으로 초기화화 됩니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.AppSectionFactory.Initialize">
+            <summary>AppSectionFactory를 초기화 합니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.AppSectionFactory.AppSection">
+            <summary>AppSection 객체를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationChangedEventArgs">
+            <summary>NeoDEEX 구성 파일이 변경 되었을 때 발생하는 ConfigurationChanged 이벤트에 대한 데이터를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationChangedEventArgs.#ctor(System.Uri)">
+            <summary>지정된 Uri 객체를 사용하여 ConfigurationChangingEventArgs 클래스의 인스턴스를 초기화합니다.</summary>
+            <param name="configUri">NeoDEEX 구성 파일 경로에 대한 Uri 객체 입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.ConfigurationChangedEventArgs.ConfigUri">
+            <summary>NeoDEEX 구성 파일 경로를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationChangingEventArgs">
+            <summary>NeoDEEX 구성 데이터의 변경을 취소 할 수 있는 이벤트에 대한 데이터를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationChangingEventArgs.#ctor(System.Uri)">
+            <summary>지정된 Uri 객체를 사용하여 ConfigurationChangingEventArgs 클래스의 새 인스턴스를 초기화 합니다.</summary>
+            <param name="configUri">NeoDEEX 구성 파일 경로에 대한 Uri 객체 입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.ConfigurationChangingEventArgs.ConfigUri">
+            <summary>NeoDEEX 구성 파일 경로를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationException">
+            <summary>NeoDEEX 구성 파일 또는 구성 데이터가 없거나 각 구성 요소가 정의되지 않은 경우와 같이, NeoDEEX 구성 시스템에 오류가 발생한 경우 throw 되는 예외입니다.</summary>
+            <remarks>NeoDEEX 구성 파일 또는 구성 데이터가 없거나, 각 구성 요소가 정의되지 않은 경우에 발생합니다. 각 섹션을 초기화하는 SectionFactory 클래스에서는 기본값을 사용하도록 설정하거나, 예외를 throw 할 수 있습니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor">
+            <summary>ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor">
+            <summary>ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor(System.Int32)">
+            <summary>지정된 오류 코드를 사용하여 ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="code">오류 코드입니다.</param>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor(System.String)">
+            <summary>지정된 오류 메시지를 사용하여 ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지입니다.</param>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor(System.String,System.Exception)">
+            <summary>지정된 오류 메시지와 예외 객체를 사용하여 ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지입니다.</param>
+            <param name="ie">예외 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationException.#ctor(System.String,System.Int32)">
+            <summary>지정된 오류 메시지와 오류 코드를 사용하여 ConfigurationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="msg">오류를 설명하는 메시지입니다.</param>
+            <param name="code">오류 코드입니다.</param>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationManager">
+            <summary>Configuration과 관련된 모든 정보를 관리하며, Application 내에서 하나의 인스턴스만 사용하도록 구성되어 있습니다. Configuration 파일이 변경되면 SectionFactory 클래스의 Initialize 메서드를 호출합니다.</summary>
+            <remarks>    ConfigurationManager는 다음의 순서로 Configuration을 구성합니다.                       app.config(web.config) 에 포함시키는 방법입니다.         app.config(web.config) 에서 Framework Configuration 파일의         위치를 지정하는 방법입니다.         ConfigurationFileName 속성에 직접 Framework Configuration         파일의 위치를 지정하는 방법입니다.         app.config(web.config) 파일이 없어도 사용 가능합니다.               동시에 적용이 된 경우에는 위에서 언급한 순서대로 Framework Configuration을 찾아서     적용합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationManager.Finalize">
+            <summary>소멸자입니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.ConfigurationManager.GetSectionNode(System.String)">
+            <summary>NeoDEEX 구성 데이터에서 sectionName에 해당하는 XmlNode를 가져옵니다.</summary>
+            <returns>sectionName에 해당하는 XmlNode 객체를 반환합니다.</returns>
+            <param name="sectionName">섹션명입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.ConfigurationManager.ConfigurationFileName">
+            <summary>응용 프로그램 구성 파일에서 NeoDEEX 구성 파일의 위치를 지정하지 않고, 코드에서 직접 설정한 NeoDEEX 구성 파일의 위치를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="E:TheOne.Configuration.ConfigurationManager.ConfigurationChanged">
+            <summary>NeoDEEX 구성 파일이 변경된 후에 발생합니다.</summary>
+        </member>
+        <member name="E:TheOne.Configuration.ConfigurationManager.ConfigurationChanging">
+            <summary>NeoDEEX 구성 파일이 변경되기 전에 발생합니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.GeneralSection">
+            <summary>NeoDEEX 프레임워크 내부에서 사용하는 환경 변수 문자열을 관리합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.GeneralSection.#ctor">
+            <summary>GeneralSection 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.GeneralSection.Item">
+            <summary>지정한 이름에 해당하는 문자열을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.GeneralSection.Item(System.String)">
+            <summary>지정한 이름에 해당하는 문자열을 가져옵니다.</summary>
+            <remarks>매개변수 name은 대소문자를 구분한다.</remarks>
+            <param name="name">아이템의 이름입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.GeneralSection.Item(System.Int32)">
+            <summary>지정한 인덱스에 해당하는 문자열을 가져옵니다.</summary>
+            <param name="index">아이템의 인덱스입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.GeneralSection.Items">
+            <summary>아이템 목록을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.GeneralSectionFactory">
+            <summary>NeoDEEX 프레임워크 내부에서 환경 변수 문자열 컬렉션을 관리하는 Factory 클래스이다.</summary>
+            <remarks>GeneralSectionFactory은 프레임워크 내부의 환경 변수를 사용하기 위해서 제공합니다. 각 애플리케이션이 프레임워크에서 제공하는 설정 정보이외에 다른 설정 정보를 사용하고자 할 때 AppSectionFactory 클래스를 사용해서 정의할 수 있습니다. GeneralSectionFactory 객체는 NeoDEEX 구성요소 파일의 내용을 읽어와서 구성되며 키/값 쌍의 GeneralSection 객체를 제공합니다. 아이템 값의 변경은 가능하지만 실제 NeoDEEX 구성요소 파일을 변경하지는 않습니다. 또한 NeoDEEX 구성요소 파일이 변경되면 GeneralSection 객체는 이전에 가지고 있던 값을 모두 초기화하고 새로 읽어와서 구성합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.GeneralSectionFactory.Initialize">
+            <summary>GeneralSectionFactory를 초기화 합니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.GeneralSectionFactory.GeneralSection">
+            <summary>GeneralSection 객체를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.NamedItem">
+            <summary>NamedItemInterface를 상속받아 구현한 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.NamedItem.#ctor">
+            <summary>NamedItem 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.NamedItem.#ctor">
+            <summary>NamedItem 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.NamedItem.#ctor(System.String,System.String)">
+            <summary>지정된 이름과 문자열 값을 사용하여 NamedItem 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="name">이름입니다.</param>
+            <param name="value">문자열 값입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.NamedItem.Name">
+            <summary>이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.NamedItem.Value">
+            <summary>문자열 값을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Configuration.NamedList`1">
+            <summary>인덱스 및 이름으로 데이터를 접근할 수 있는 컬렉션 클래스입니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+        </member>
+        <member name="M:TheOne.Configuration.NamedList`1.GetKeyForItem(TItem)">
+            <summary>지정된 요소(TItem)에서 키를 추출한다.</summary>
+            <returns>지정된 요소(TItem)의 키를 반환한다.</returns>
+            <param name="item">키를 추출할 요소(TItem) 입니다.</param>
+        </member>
+        <member name="P:TheOne.Configuration.NamedList`1.Item">
+            <summary>컬렉션에서 지정된 키를 가진 요소(TItem)를 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Configuration.NamedList`1.Item(System.String)">
+            <summary>컬렉션에서 지정된 키를 가진 요소(TItem)를 가져옵니다.</summary>
+            <remarks>지정된 키를 가진 요소(TItem)가 없는 경우 null을 반환한다.</remarks>
+            <param name="key">가져올 요소(TItem)의 키 입니다.</param>
+        </member>
+        <member name="T:TheOne.Configuration.SectionFactory">
+            <summary>XmlNode의 정보를 이용해서 Section 구성 정보를 구성하는 기본 클래스를 정의합니다.</summary>
+            <remarks>    SectionFactory 클래스는 NeoDEEX 구성 파일이 변경되면     ConfigurationChangedEventArgs)가 발생하고 내부적으로 Initialize 메서드가 호출이     됩니다.     NeoDEEX 구성 파일이 변경되었을 때 처리해야 하는 동작은 Initialize 메서드에서     구현합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.SectionFactory.ConfigurationChanged(System.Object,TheOne.Configuration.ConfigurationChangedEventArgs)">
+            <summary>    NeoDEEX 구성 파일이 변경되면 발생합니다.     Section 구성 정보를 재구성하기 위해서 Initialize 메서드를 호출합니다.</summary>
+            <param name="sender">이벤트 소스 입니다.</param>
+            <param name="e">이벤트 데이터가 들어있는 ConfigurationChangedEventArgs 객체 입니다.</param>
+        </member>
+        <member name="M:TheOne.Configuration.SectionFactory.Initialize">
+            <summary>SectionFactory를 초기화합니다.</summary>
+            <remarks>Initialize 메서드는 NeoDEEX 구성 데이터를 최초 구성하거나 또는 NeoDEEX 구성 파일이 변경된 경우에 호출됩니다. 추가적인 ConfigurationSection이 필요한 경우 SectionFactory를 상속받아서 Initialize 메서드를 override 하여 구현합니다.</remarks>
+        </member>
+        <member name="T:TheOne.Configuration.SectionHandler">
+            <summary>응용 프로그램 구성 파일(app.config, web.config)에 들어 있는 NeoDEEX 구성 데이터를 처리합니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+            <remarks>응용 프로그램 구성 파일내에 NeoDEEX 구성 데이터를 정의하기 위해서는 먼저 NeoDEEX 구성 데이터를 처리할 수 있는 SectionHandler 를 등록해야 합니다. SectionHandler 는 응용 프로그램 구성 파일 내에 설정된 NeoDEEX 구성 데이터를 이용하여 NeoDEEX 구성 환경을 초기화합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.SectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>NeoDEEX 구성 데이터에 대한 구성 섹션 처리기를 만듭니다.</summary>
+            <returns>NeoDEEX 구성 데이터에 대한 섹션 처리기 객체를 반환합니다.</returns>
+            <param name="parent">부모 객체입니다.</param>
+            <param name="configContext">구성컨텍스트 객체입니다.</param>
+            <param name="section">섹션 xml노드입니다.</param>
+        </member>
+        <member name="T:TheOne.Configuration.SerializeHelper">
+            <summary>NeoDEEX 구성 데이터 섹션에 대한 serialize / deserialize 기능을 제공합니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+            <remarks>NeoDEEX 구성 데이터 섹션에 대한 serialize / deserialize 를 Helper 클래스이며, deserialize 과정에서 예외가 발생하면 예외를 throw 합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Configuration.SerializeHelper.Deserialize(System.Xml.XmlReader,System.Type)">
+            <summary>XmlReader 정보를 이용해서 객체를 deserialize 합니다.</summary>
+            <returns>deserialize 되어진 객체를 반환합니다.</returns>
+            <param name="reader">deserialize 하기 위한 XmlReader 객체입니다.</param>
+            <param name="type">대상 객체의 타입입니다.</param>
+        </member>
+        <member name="M:TheOne.Configuration.SerializeHelper.Serialize(System.Xml.XmlWriter,System.Object,System.Type)">
+            <summary>대상 객체를 serailize 합니다.</summary>
+            <param name="writer">XmlWriter 객체입니다.</param>
+            <param name="section">Serialize를 하려는 대상 객체입니다.</param>
+            <param name="type">대상 객체의 타입입니다.</param>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationChangedEventHandler">
+            <summary>ConfigurationChanged 이벤트를 처리할 메서드를 나타냅니다.</summary>
+            <param name="sender">이벤트 소스입니다.</param>
+            <param name="e">이벤트 데이터가 들어 있는 ConfigurationChangedEventArgs 객체입니다.</param>
+        </member>
+        <member name="T:TheOne.Configuration.ConfigurationChangingEventHandler">
+            <summary>ConfigurationChanging 이벤트를 처리할 메서드를 나타냅니다.</summary>
+            <param name="sender">이벤트 소스 입니다.</param>
+            <param name="e">    이벤트 데이터가 들어있는 ConfigurationChangingEventArgs     객체입니다.</param>
+        </member>
+        <member name="N:TheOne.Deployment">
+            <summary>TheOne.Deployment네임스페이스에서는 배포와 관련된 클래스들을 제공합니다.</summary>
+        </member>
+        <member name="T:TheOne.Deployment.ApplicationExecute">
+            <summary>ApplicationExecute 클래스는 새로운 애플리케이션 도메인을 생성해서 애플리케이션을 실행합니다.</summary>
+            <remarks>    새로운 애플리케이션 도메인은 NTD 방식으로 어셈블리를 다운로드 하게된다. 항상 브라우져가 필요한 독립     스마트클라이언트의 단점을 해소하고 실행아이콘을 만들어주는 장점이 있습니다.          ClickOnce Host Application은 다음과 같이 작성합니다.      static class Program{   [STAThread]   static void Main()   {       ApplicationExecute.Run("./SmartClient", "WCF.Launcher.exe", "ClientUI.config.xml");   }} </remarks>
+        </member>
+        <member name="M:TheOne.Deployment.ApplicationExecute.Run(System.String,System.String,System.String)">
+            <summary>새로운 애플리케이션 도메인을 생성하고 assemblyFile을 실행합니다.</summary>
+            <param name="applicationBase">애플리케이션 베이스 디렉토리. ClickOnce 배포 위치로 부터 상대 경로입니다.</param>
+            <param name="assemblyFile">실행하려는 어셈블리 파일입니다.</param>
+            <param name="configurationFile">애플리케이션 Configuration 파일입니다.</param>
+        </member>
+        <member name="N:TheOne.Diagnostics">
+            <summary>TheOne.Diagnostics 네임스페이스는 이벤트 로그 및 파일에 로그를 기록할 수 있는 클래스를 제공합니다. EventLogger클래스는 이벤트로그에 메세지를 남기는 인스턴스 메서드를 제공하며 FileLogger클래스는 파일에 로그를 기록하는 인스턴스 메서드를 제공합니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.LogLevel">
+            <summary>이벤트 로그 또는 파일 로그의 형식을 지정합니다.</summary>
+            <remarks>LogLevel은 이벤트 로그의 로그 레벨과 동등합니다. 다만 Verbose는 이벤트 로그의 SuccessAduit에 대응 됩니다.</remarks>
+        </member>
+        <member name="F:TheOne.Diagnostics.LogLevel.Verbose">
+            <summary>단순 트레이스, 디버깅을 위한 용도의 로깅 레벨을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.LogLevel.Information">
+            <summary>정보 표시 용도의 로깅 레벨을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.LogLevel.Warnning">
+            <summary>경고 표시 용도의 로깅 레벨을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.LogLevel.Error">
+            <summary>오류 표시 용도의 로깅 레벨을 나타냅니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.PerfCounterMode">
+            <summary>성능 카운터의 모드의 형식을 정의합니다.</summary>
+            <remarks>지원되는 성능 카운터 모드는 두가지 로서 SimpleCounter와 SystemCounter가 있습니다. SimpleCounter는 단순히 파일로그에 객체가 Activate되서 Deactivate될 때까지 소요된 시간을 남기는 것입니다. 반면 SystemCounter는 Windows의 Performance Counter 를 사용하여 성능 카운터 기록을 남깁니다. None의 경우, 성능 카운터를 사용하지 않는 경우입니다.</remarks>
+        </member>
+        <member name="F:TheOne.Diagnostics.PerfCounterMode.None">
+            <summary>성능 카운터를 사용하지 않습니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.PerfCounterMode.SimpleCounter">
+            <summary>단순히 객체가 Activate되서 Deactivate될 때까지 소요된 시간을 파일 로그에 기록합니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.PerfCounterMode.SystemCounter">
+            <summary>Windows의 Performance Counter를 이용하여 성능 카운터 기록을 남깁니다.</summary>
+        </member>
+        <member name="F:TheOne.Diagnostics.PerfCounterMode.Both">
+            <summary>SimpleCounter와 SystemCounter를 모두 사용합니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.EventLogger">
+            <summary>이벤트 로그에 메시지를 남기는 인스턴스 메서드를 제공합니다.</summary>
+            <remarks>이벤트 로그에 메시지를 남기기 위한 클래스로는 .NET Framework가 제공한는 System.Diagnostics.EventLog 클래스를 사용할 수도 있지만 EventLogHelper 클래스는 보다 편리한 기능을 제공합니다.  Windows NT 이상에서 제공되는 이벤트 로그는 이벤트 로그 파일에 각각 기록된다. 기본으로 제공되는 이벤트 로그는 Application, Security, System의 세가지가 있습니다. EventLogHelper 클래스는 추가적으로 어플리케이션 시스템 레벨의 이벤트 로그 파일에 이벤트 로그가 기록되게 됩니다. 이는 EventLog Viewer에서 Windows가 제공하는 세가지 이벤트 로그 외에 추가적인 항목이 나타나게 됨을 의미합니다. 이를 통해 보다 독립적인 이벤트 로깅 기능을 구축할 수 있습니다. EventLogHelper 클래스를 통해 기록되는 이벤트 로그는 NeoDEEX 구성 파일의 eventLog 값을 사용하며 NeoDEEX 구성 파일이 없는 경우 기본 로그인 'TheOne' 이벤트 로그에 기록됩니다. 생성자에서 주어진 이벤트 소스명을 사용해서 이벤트 로그에 기록하고, 이벤스 소스가 없는 경우에는 NeoDEEX 구성 파일의 defaultEventSource 값을 사용하고, NeoDEEX 구성 파일이 없는 경우에는 기본값인 "TheOneLog"를 사용합니다.  로깅 메시지는 Error, Warnning, Information, Verbose 4가지 레벨로 구성됩니다. Error는 오류를, Warnning은 경고를, Information은 정보를, Verbose는 디버깅이나 트레이스 용도로 사용합니다. 이 레벨은 EventLog의 EventLogEntryType과는 다른 프레임워크만의 레벨임에 유의해야 합니다.  로깅 메시지는 BaseLogLevel을 기준으로 로그 파일에 기록되거나 기록되지 않을 수도 있습니다. 즉, BaseLogLevel 보다 낮은 레벨의 로깅 메시지는 파일에 기록되지 않습니다. 예를 들어 BaseLogLevel이 Information 인 경우, Verbose 로깅 메시지는 로그 파일에 기록되지 않습니다. 개발 및 초기 운영 단계에서는 BaseLogLevel을 낮은 수준(Verbose)에 두어 다양한 로그 메시지를 남김으로써 디버깅에 도움이 되도록 하고, 시스템 안정화 이후에 로그 레벨을 높임으로써 불필요한 로그 메시지가 성능을 저하시키지 않도록 합니다.  BaseLogLevel은 NeoDEEX 구성 파일의 baseLogLevel 특성의 값에 의해 결정됩니다. NeoDEEX 구성 파일이 없는 경우 BaseLogLevel의 기본값은 Warnning입니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.#ctor">
+            <summary>로그 레벨 기본값과 이벤트 소스 이름의 기본값을 사용하여 EventLogger클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.#ctor">
+            <summary>로그 레벨 기본값과 이벤트 소스 이름의 기본값을 사용하여 EventLogger클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>로그 레벨 기본값은 Information이며 기본 파일명은 DefaultSourceName속성의 값이 사용됩니다. 로그레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.#ctor(TheOne.Diagnostics.LogLevel)">
+            <summary>지정된 로그 레벨과 이벤트 소스 이름의 기본값을 사용하여 EventLogger클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>기본 파일명은 DefaultSourceName속성의 값이 사용됩니다. 로그레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="level">로그 레벨입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.#ctor(System.String)">
+            <summary>지정된 로그 레벨 기본값과 지정된 이벤트 소스 이름을 사용하여 EventLogger클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>로그 레벨의 기본값은 Information입니다. 로그레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="sourceName">이벤트 소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.#ctor(System.String,TheOne.Diagnostics.LogLevel)">
+            <summary>지정된 이벤트 소스 이름과 로그 레벨을 사용하여 EventLogger클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>로그레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="sourceName">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 레벨입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel 속성의 값이 사용되고 이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 된다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(System.Int32,System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 이벤트 카테고리의 기본값은 0 이 사용됩니다. 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 이벤트 카테고리의 기본값은 0 이 사용됩니다. 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 ID 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 이벤트 ID 의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,System.Int32,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 메시지 레벨은 생성자에서 주어진 LogLevel 혹은 LogLevel속성의 값이 사용되고 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogger.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 소스는 생성자에서 주어진 이벤트 소스 혹은 DefaultSourceName 값이 사용되며 지정된 로그 메시지 레벨이 LogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogger.EventLog">
+            <summary>EventLog클래스 객체를 가져옵니다.</summary>
+            <remarks>이 속성이 반환하는 EventLog클래스 객체는 이벤트 로그 이름, 이벤트 소스 이름이 생성자등의 설정을 통해 이미 설정된 것입니다. 이 속성의 EventLog객체를 통해 이벤트 로그를 직접 기록하는 경우 로그 레벨은 적용되지 않습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogger.LogLevel">
+            <summary>EventLogger 인스턴스에서 로깅 메시지의 메시지 레벨을 가져오거나 설정합니다.</summary>
+            <remarks>인스턴스 Write 메서드들에서 명시적으로 LogLevel을 주지 않을 때 이 속성의 값이 메시지 레벨로 사용됩니다. 기본값은 Information 이며, 이 기본값을 읽거나 수정하기 위해서는 정적 속성인 DefaultLogLevel을 사용합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogger.Source">
+            <summary>로그 메시지가 기록될 이벤트 로그 소스 이름이다.</summary>
+            <remarks>이벤트 로그 소스 이름은 생성자를 통해 설정하거나 Source 속성을 통해 설정할 수 있습니다. 추천되는 방법은 Configuration 파일을 통해 설정하는 것으로써 코드의 수정 없이 이벤트 로그 소스 이름을 변경할 수 있다는 장점이 있습니다.</remarks>
+        </member>
+        <member name="T:TheOne.Diagnostics.EventLogHelper">
+            <summary>이벤트 로그에 메시지를 남기는 정적 메서드를 제공합니다.</summary>
+            <remarks>이벤트 로그에 메시지를 남기기 위한 클래스로는 .NET Framework가 제공한는 System.Diagnostics.EventLog 클래스를 사용할 수도 있지만 EventLogHelper 클래스는 보다 편리한 기능을 제공합니다.  Windows NT 이상에서 제공되는 이벤트 로그는 이벤트 로그 파일에 각각 기록됩니다. 기본으로 제공되는 이벤트 로그는 Application, Security, System의 세가지가 있다. EventLogHelper 클래스는 추가적으로 어플리케이션 시스템 레벨의 이벤트 로그 파일에 이벤트 로그가 기록되게 됩니다. 이는 EventLog Viewer에서 Windows가 제공하는 세가지 이벤트 로그 외에 추가적인 항목이 나타나게 됨을 의미합니다. 이를 통해 보다 독립적인 이벤트 로깅 기능을 구축할 수 있습니다. EventLogHelper 클래스를 통해 기록되는 이벤트 로그는 NeoDEEX 구성 파일의 eventLog 값을 사용하며 NeoDEEX 구성 파일이 없는 경우 기본 로그인 'TheOne' 이벤트 로그에 기록됩니다. 지정된 이벤트 소스명을 사용해서 이벤트 로그에 기록하고, 지정된 이벤스 소스가 없는 경우에는 NeoDEEX 구성 파일의 defaultEventSource를 사용하며 NeoDEEX 구성 파일이 없는 경우에는 기본값인 "TheOneLog" 사용합니다.  로깅 메시지는 Error, Warnning, Information, Verbose 4가지 레벨로 구성된다. Error는 오류를, Warnning은 경고를, Information은 정보를, Verbose는 디버깅이나 트레이스 용도로 사용합니다. 이 레벨은 EventLog의 EventLogEntryType과는 다른 프레임워크만의 레벨임에 유의해야 합니다.  로깅 메시지는 BaseLogLevel을 기준으로 로그 파일에 기록되거나 기록되지 않을 수도 있습니다. 즉, BaseLogLevel 보다 낮은 레벨의 로깅 메시지는 파일에 기록되지 않습니다. 예를 들어 BaseLogLevel이 Information 인 경우, Verbose 로깅 메시지는 로그 파일에 기록되지 않습니다. 개발 및 초기 운영 단계에서는 BaseLogLevel을 낮은 수준(Verbose)에 두어 다양한 로그 메시지를 남김으로써 디버깅에 도움이 되도록 하고, 시스템 안정화 이후에 로그 레벨을 높임으로써 불필요한 로그 메시지가 성능을 저하시키지 않도록 합니다.  BaseLogLevel은 NeoDEEX 구성 파일의 baseLogLevel 특성의 값에 의해 결정됩니다. NeoDEEX 구성 파일이 없는 경우 BaseLogLevel의 기본값은 Warnning입니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.#ctor">
+            <summary>EventLogHelper클래스의 새 인스턴스를 초기화 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.ExceptionWrite">
+            <summary>"Application" 이벤트 로그에 "TheOneFramework" 이벤트 소스명으로 예외 정보를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.ExceptionWrite(System.String)">
+            <summary>"Application" 이벤트 로그에 "TheOneFramework" 이벤트 소스명으로 예외 정보를 기록합니다.</summary>
+            <remarks>NeoDEEX 프레임워크 내부에서 사용됩니다.</remarks>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.ExceptionWrite(System.String,TheOne.Diagnostics.LogLevel)">
+            <summary>"Application" 이벤트 로그에 "TheOneFramework" 이벤트 소스명으로 예외 정보를 기록합니다.</summary>
+            <remarks>NeoDEEX 프레임워크 내부에서 사용됩니다.</remarks>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="level">로그 레벨입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>메시지 레벨은 정적속성인 DefautLogLevel의 값이 사용되며 이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용된다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용이 가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용이 가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(System.String,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 된다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이하다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.Write(System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>메시지 레벨은 정적속성인 DefautLogLevel 의 값이 사용되며 이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 된다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 된다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다. 이벤트 소스는 configuration 파일의 defaultEventSource 값을 사용하고 configuration 파일이 정의되지 않은 경우에는 "TheOneLog" 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,System.String,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 ID의 기본값과 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>이벤트 카테고리의 기본값은 0 이 사용됩니다. 지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.EventLogHelper.WriteIf(System.Boolean,System.String,TheOne.Diagnostics.LogLevel,System.Int32,System.Int16,System.Byte[],System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 기본값으로 정의된 이벤트 소스 이름으로 이벤트 로그에 메시지를 기록합니다.</summary>
+            <remarks>지정된 로그 메시지 레벨이 BaseLogLevel 보다 낮은 경우, 메시지는 필터링 됩니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 EventLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다. 이벤트 로그는 Application, System 등의 로그가 아닌 configuration 파일의 eventLog 특성에 설정된 값을 사용해서 기록되며 configuration 파일이 정의되지 않은 경우에는 "TheOne" 로그에 기록됩니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="source">이벤트 소스 이름입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="eventID">이벤트 ID입니다.</param>
+            <param name="category">카테고리 ID입니다.</param>
+            <param name="rawData">이벤트 raw 데이터입니다.</param>
+            <param name="format">메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogHelper.BaseLogLevel">
+            <summary>이벤트 로그 메시지의 필터링을 위해 사용되는 베이스 로그 레벨을 가져옵니다.</summary>
+            <remarks>베이스 로그 레벨 즉, BaseLogLevel 속성의 로그 레벨보다 낮은 메시지는 이벤트 로그에 기록되지 않습니다. BaseLogLevel 속성의 값은 BaseLogLevel속성의 값은 configuration 파일의 baseLogLevel 특성에 설정된 값을 사용하며 configuration 파일이 정의되지 않은 경우 기본값은 Information 입니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogHelper.DefaultLogLevel">
+            <summary>EventLogHelper 클래스의 인스턴스나 정적 Write 메서드에서 사용하는 로그 레벨 기본값을 가져오거나 설정합니다.</summary>
+            <remarks>EventLogHelper 인스턴스를 생성하거나 정적 Write 메서드를 호출 할 때 명시적으로 LogLevel이 주어지지 않으면 이 속성의 값(기본값은 Information이다.)이 사용됩니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogHelper.DefaultSourceName">
+            <summary>이벤트 소스 이름이 명시적으로 주어지지 않을 때 사용되는 이벤스 소스 이름을 가져옵니다.</summary>
+            <remarks>이벤트 소스 이름이 명시적으로 주어지지 않을 때 DefaultSourceName속성의 값은 configuration 파일의 defaultEventSource 특성에 설정된 값을 사용하며 configuration 파일이 정의되지 않은 경우 기본값은 "TheOneLog" 입니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.EventLogHelper.EventLogName">
+            <summary>이벤트 로그가 기록될 이벤트 로그 이름을 가져옵니다.</summary>
+            <remarks>Windows NT 이상에서 제공되는 이벤트 로그는 이벤트 로그 파일에 각각 기록됩니다. 기본으로 제공되는 이벤트 로그는 Application, Security, System의 세가지가 있습니다. EventLogHelper 클래스는 추가적으로 어플리케이션 시스템 레벨의 이벤트 로그 파일에 이벤트 로그가 기록되게 됩니다. 이는 EventLog Viewer에서 Windows가 제공하는 세가지 이벤트 로그 외에 추가적인 항목이 나타나게 됨을 의미합니다. 이를 통해 보다 독립적인 이벤트 로깅 기능을 구축할 수 습니다. EventLogName속성의 값은 configuration 파일의 eventLog 특성에 설정된 값을 사용하며 configuration 파일이 정의되지 않은 경우 기본값은 "TheOne" 입니다.</remarks>
+        </member>
+        <member name="T:TheOne.Diagnostics.FileLogger">
+            <summary>파일에 로그를 기록하는 인스턴스 메서드를 제공합니다.</summary>
+            <remarks>    로그 파일이 생성되는 디렉터리는 configuration 파일의 logDirectory 특성의 값을     따릅니다. 만약 이 키가 존재하지 않는 경우 C:\Temp 디렉토리를 사용합니다. 지정된 로그 파일 디렉토리가     존재하지 않는다면 자동으로 생성 됩니다.          Configuration 파일의 위치는 AppSettings의 ConfigurationFile 키값에서 지정하며     AppSettings의 ConfigurationFile 키값이 없거나 LogSection에 FileLog에 대한     설정이 없으면 모든 설정값은 기본값을 사용합니다.          로그 파일은 지정된 파일명 뒤에 로그 파일이 일별로 생성됨을 의미하는 yymmdd 형식의 날짜 suffix가     붙습니다. 파일명이 명시적으로 생성자에 입력되지 않으면 NeoDEEX 구성 파일의 값을 사용하며, NeoDEEX     구성 파일이 없는 경우 "TheOneLog"를 사용합니다. 로그 파일의 각 로그 메시지 엔트리는 로그 메시지의     레벨(아래 참조)의 첫글자와 로그의 발생 시간이 같이 표시됩니다.          예) V 11:22:21.122: Log message sample...          로깅 메시지는 Error, Warnning, Information, Verbose 4가지 레벨로 구성됩니다.     Error는 오류를, Warnning은 경고를, Information은 정보를, Verbose는 디버깅이나     트레이스 용도로 사용합니다.          로깅 메시지는 BaseLogLevel을 기준으로 로그 파일에 기록되거나 기록되지 않을 수도 있습니다. 즉,     BaseLogLevel 보다 낮은 레벨의 로깅 메시지는 파일에 기록되지 않습니다. 예를 들어     BaseLogLevel이 Information 인 경우, Verbose 로깅 메시지는 로그 파일에 기록되지     않습니다. 개발 및 초기 운영 단계에서는 BaseLogLevel을 낮은 수준(Verbose)에 두어 다양한 로그     메시지를 남김으로써 디버깅에 도움이 되도록 하고, 시스템 안정화 이후에 로그 레벨을 높임으로써 불필요한 로그     메시지가 성능을 저하시키지 않도록 합니다.          BaseLogLevel은 NeoDEEX 구성 파일의 baseLogLevel 특성의 값에 의해 결정됩니다.     NeoDEEX 구성 파일이 없는 경우 BaseLogLevel의 기본값은 Verbose입니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.#ctor">
+            <summary>로그 레벨 기본값과 기본 파일명을 사용하여 FileLogger클래스의 새 인스턴스를 초기화 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.#ctor">
+            <summary>로그 레벨 기본값과 기본 파일명을 사용하여 FileLogger클래스의 새 인스턴스를 초기화 합니다.</summary>
+            <remarks>로그레벨 기본값은 DefaultLogLevel 값을 사용하고, 기본 파일명은 DefaultFilePrefix 값을 사용한다. 로그레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 한다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.#ctor(TheOne.Diagnostics.LogLevel)">
+            <summary>지정된 로그 레벨과 기본 파일명을 사용하여 FileLogger클래스의 새 인스턴스를 최기화 합니다.</summary>
+            <remarks>기본 파일명은 DefaultFilePrefix 값을 사용합니다. 로그 레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="level">로그 레벨입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.#ctor(System.String)">
+            <summary>로그레벨 기본값과 지정된 파일명을 사용하여 FileLogger클래스의 새 인스턴스를 초기화 합니다.</summary>
+            <remarks>기본 로그레벨은 DefaultLogLevel 값을 사용합니다. 로그 레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="filePrefix">로그 파일명입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.#ctor(System.String,TheOne.Diagnostics.LogLevel)">
+            <summary>지정된 로그레벨과 파일명을 사용하여 FileLogger클래스의 새 인스턴스를 초기화 합니다.</summary>
+            <remarks>로그 레벨이 BaseLogLevel 보다 낮은 경우, 로그는 기록되지 않음에 유의해야 합니다.</remarks>
+            <param name="filePrefix">로그 파일명입니다.</param>
+            <param name="defaultLevel">로그 레벨입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.Write">
+            <summary>로그 파일에 로그 메시지를 기록한다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.Write(System.String,System.Object[])">
+            <summary>로그 파일에 로그 메시지를 기록한다.</summary>
+            <remarks>로그 파일명은 FilePrefix 값을 사용하고 로그 메시지의 로그 레벨은 LogLevel 값을 사용합니다.</remarks>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.Write(TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>로그 파일에 로그 메시지를 기록한다.</summary>
+            <remarks>로그 파일명은 FilePrefix 값을 사용하고 이 메서드 호출에 지정된 로그 레벨은 LogLevel 속성의 값을 오버라이드 합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.WriteIf">
+            <summary>지정된 조건식이 true 이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.WriteIf(System.Boolean,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 파일명은 FilePrefix 값을 사용하고 로그 메시지의 로그 레벨은 LogLevel 값을 사용합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogger.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 파일명은 FilePrefix 값을 사용하고 이 메서드 호출에 지정된 로그 레벨은 LogLevel 속성의 값을 오버라이드 합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogger.FilePrefix">
+            <summary>FileLogger 인스턴스에서 사용하는 로그 파일명을 가져오거나 설정합니다.</summary>
+            <remarks>로그 파일명 뒤에 yymmd 형식의 날짜 suffix 가 붙게 됩니다. 예를 들어 FilePrefix 프로퍼티의 값이 MyLog 라면 MyLog_090101.log 형태의 로그 파일이 기록되며 이 로그는 2009년 1월 1일에 작성된 로그인 것입니다. 기본 로그 파일명은 DefaultFilePrefix 속성의 값이 사용됩니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogger.LogLevel">
+            <summary>FileLogger 인스턴스에서 로깅 메시지의 메시지 레벨을 가져오거나 설정합니다.</summary>
+            <remarks>Write 메서드들에서 명시적으로 LogLevel을 주지 않을 때 이 속성의 값이 메시지 레벨로 사용됩니다. 기본값은 DefaultLogLevel 을 사용합니다.</remarks>
+        </member>
+        <member name="T:TheOne.Diagnostics.FileLogHelper">
+            <summary>파일에 로그를 기록하는 정적 메서드를 제공합니다.</summary>
+            <remarks>로그 파일이 생성되는 디렉터리는 Configuration 파일의 logDirectory 특성의 값을 따른다. 만약 이 키가 존재하지 않는 경우 C:\Temp 디렉토리를 사용한다. 주어진 로그 파일 디렉토리가 존재하지 않는다면 자동으로 생성될 것이다.  Configuration 파일의 위치는 AppSettings의 ConfigurationFile 키값에서 지정하며 AppSettings의 ConfigurationFile 키값이 없거나 LogSection에 FileLog에 대한 설정이 없으면 기본값을 사용한다.  로그 파일은 주어진 파일명(기본값은 DefaultFilePrefix 속성 값 사용) 뒤에 yymmdd 형식의 날짜 suffix가 붙는다. 이는 로그 파일이 일별로 생성됨을 의미한다. 로그 파일의 각 로그 메시지 엔트리는 로그 메시지의 레벨(아래 참조)의 첫글자와 로그의 발생 시간이 같이 표시된다.  예) V 11:22:21.122: Log message sample...  로깅 메시지는 Error, Warnning, Information, Verbose 4가지 레벨로 구성된다. Error는 오류를, Warnning은 경고를, Information은 정보를, Verbose는 디버깅이나 트레이스 용도로 사용한다.  로깅 메시지는 BaseLogLevel을 기준으로 로그 파일에 기록되거나 기록되지 않을 수도 있다. 즉, BaseLogLevel 보다 낮은 레벨의 로깅 메시지는 파일에 기록되지 않는다. 예를 들어 BaseLogLevel이 Information 인 경우, Verbose 로깅 메시지는 로그 파일에 기록되지 않는다. 개발 및 초기 운영 단계에서는 BaseLogLevel을 낮은 수준(Verbose)에 두어 다양한 로그 메시지를 남김으로써 디버깅에 도움이 되도록 하고, 시스템 안정화 이후에 로그 레벨을 높임으로써 불필요한 로그 메시지가 성능을 저하시키지 않도록 한다.  BaseLogLevel은 NeoDEEX 구성 파일의 baseLogLevel 특성의 값에 의해 결정된다. NeoDEEX 구성 파일이 없는 경우 BaseLogLevel의 기본값은 Verbose이다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.#ctor">
+            <summary>FileLogHelper클래스의 새 인스턴스를 초기화 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.Write">
+            <summary>기본값으로 정의된 파일명과 로그 레벨 기본값을 사용해서 로그 파일에 로그 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.Write(System.String,System.Object[])">
+            <summary>기본값으로 정의된 파일명과 로그 레벨 기본값을 사용해서 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 메시지의 파일명은 이 클래스의 DefaultFilePrefix 값을 사용합니다. 로그 메시지의 로그 레벨은 이 클래스의 DefaultLogLevel의 값을 사용합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.Write(TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 메시지의 파일명은 이 클래스의 DefaultFilePrefix 값을 사용합니다. 이 메서드의 로그 메시지 레벨은 DefaultLogLevel속성의 설정을 오버라이드 합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.Write(System.String,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>이 메서드의 로그 메시지 레벨은 DefaultFilePrefix속성의 설정을 오버라이드 합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="filePrefix">로그 파일명입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.WriteIf">
+            <summary>지정된 조건식이 true 이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.WriteIf(System.Boolean,System.String,System.Object[])">
+            <summary>지정된 조건식이 true 이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 메시지의 파일명은 이 클래스의 DefaultFilePrefix 값을 사용합니다. 로그 메시지의 로그 레벨은 이 클래스의 DefaultLogLevel의 값을 사용합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.WriteIf(System.Boolean,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>로그 메시지의 파일명은 이 클래스의 DefaultFilePrefix 값을 사용합니다. 이 메서드의 로그 메시지 레벨은 DefaultLogLevel속성의 설정을 오버라이드 합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.FileLogHelper.WriteIf(System.Boolean,System.String,TheOne.Diagnostics.LogLevel,System.String,System.Object[])">
+            <summary>지정된 조건식이 true이면 로그 파일에 로그 메시지를 기록합니다.</summary>
+            <remarks>이 메서드의 로그 메시지 레벨은 DefaultLogLevel속성의 설정을 오버라이드 합니다. 정적 Write 메서드는 간단히 한 번의 로그 메시지를 남기고자 할 때 FileLogHelper의 인스턴스를 생성할 필요 없이 사용가능하므로 사용이 용이합니다.</remarks>
+            <param name="expr">조건식입니다.</param>
+            <param name="filePrefix">로그 파일명입니다.</param>
+            <param name="level">로그 메시지 레벨입니다.</param>
+            <param name="format">로그 메시지 포맷입니다.</param>
+            <param name="args">가변 매개변수입니다.</param>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogHelper.BaseLogLevel">
+            <summary>로그 메시지의 필터링을 위해 사용되는 베이스 로그 레벨을 가져옵니다.</summary>
+            <remarks>베이스 로그 레벨 즉, BaseLogLevel 속성의 로그 레벨보다 낮은 메시지는 로그 파일에 기록되지 않습니다. BaseLogLevel 속성의 값은 configuration 파일의 baseLogLevel 특성에 설정된 값을 사용하며 configuration 파일이 정의되지 않은 경우 기본값은 Information 입니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogHelper.DefaultFilePrefix">
+            <summary>로그 파일명이 명시적으로 주어지지 않을 때 사용되는 로그 파일명을 가져옵니다.</summary>
+            <remarks>로그 파일명이 명시적으로 주어지지 않을 때 DefaultFilePrefix 속성이 나타내는 파일명이 암시적으로 사용됩니다. DefaultFilePrefix 속성 값은 configuration 파일의 defaultPrefix 특성에 설정된 값을 사용하며 configuration 파일이 정의되지 않은 경우 기본값은 "TheOneLog" 입니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogHelper.DefaultLogLevel">
+            <summary>FileLogHelper 클래스의 인스턴스나 정적 Write 메서드에서 사용하는 로그 레벨 기본값을 가져오거나 설정합니다.</summary>
+            <remarks>FileLogHelper 인스턴스를 생성하거나 정적 Write 메서드를 호출 할 때 명시적으로 LogLevel이 주어지지 않으면 이 속성의 값(기본값은 Verbose이다.)이 사용됩니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogHelper.Encoding">
+            <summary>로그 메시지에 사용되는 문자열 인코딩을 가져오거나 설정합니다.</summary>
+            <remarks>로그 파일은 Encoding 프로퍼티가 지시하는 인코딩 값을 사용하여 생성됩니다. 기본값은 Code Page 949, 즉 ks_c_5601 인코딩(ANSI) 을 사용합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.FileLogHelper.LogDirectory">
+            <summary>로그 파일이 생성될 로그 디렉토리 경로이름를 가져옵니다.</summary>
+            <remarks>로그 파일이 생성될 로그 디렉토리를 나타냅니다. 로그 디렉토리를 설정하기 위해서는 configuration 파일의 logDirectory 특성에 값을 지정합니다. configuration 파일이 정의되지 않은 경우 기본값은 "C:\Temp" 폴더를 사용합니다.  로그 디렉토리가 존재하지 않는 경우, 해당 디렉토리를 자동으로 생성합니다.</remarks>
+        </member>
+        <member name="T:TheOne.Diagnostics.TimeCounter">
+            <summary>성능 측정을 위해 소요된 시간을 계산해 줍니다.</summary>
+            <remarks>WIN32 API의 QueryPerformanceCounter() 함수를 사용하여 시간이 소요됨에 따라 증가하는 카운터 값을 통해 어떠한 작업에 소요되는 시간을 계산해 줍니다.  일반적으로 성능 측정이란 어떤 작업에 소요되는 시간을 측정하는 것을 말합니다. 따라서 측정하고자 하는 작업 수행 전에 TimeCounter 클래스의 Start()를 호출하고 작업이 끝난 직후에 Stop()를 호출하면 해당 작업에 소요되는 시간을 TimeCounter 클래스의 Seconds, Milliseconds, Microseconds 속성 등을 통해서 알아 낼 수 있습니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.TimeCounter.Clear">
+            <summary>카운터 기록을 초기화 합니다. 즉, 기록해둔 소요 시간을 초기화를 하는 것입니다.</summary>
+            <remarks>Start 혹은 Stop 메서드에 의해 기록된 카운터 시작 값 및 경과 시간 정보를 초기화를 합니다. 새로운 성능 측정의 시작을 위해서는 Clear 메서드를 반드시 호출해 주어야 합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.TimeCounter.Start">
+            <summary>카운터를 시작합니다.</summary>
+            <remarks>Start 메서드 수행 시점에서 카운터 값을 기록해 두고, 후에 Stop 메서드가 수행될 때의 카운터 값으로 부터 경과된 시간을 계산합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.TimeCounter.Stop">
+            <summary>카운터를 정지합니다.</summary>
+            <remarks>Start 메서드 수행 시점에서 카운터 값을 기록해 두고, 후에 Stop 메서드가 수행될 때의 카운터 값으로 부터 경과된 시간을 계산합니다. 카운터는 초당 일정한 값만큼 증가하므로(Frequency) 카운터의 변화값으로부터 소요된 시간을 계산할 수 있습니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.TimeCounter.ToString">
+            <summary>소요된 시간 값을 문자열로 반환합니다.</summary>
+            <returns>문자열을 반환합니다.</returns>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Current">
+            <summary>현재 카운터 값을 가져옵니다.</summary>
+            <remarks>카운터의 값은 64비트 정수형 값으로 시간이 지남에 따라서 증가합니다. 1초당 증가하는 카운터 값은 일정하며 static Frequency 속성를 통해 알아 낼 수 있습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Frequency">
+            <summary>카운터의 Frequency를 가져옵니다.</summary>
+            <remarks>Frequency는 시스템에 따라서 다른 값으로서 WIN32 API인 QueryPerformanceFrequency() 함수를 호출함으로써 얻을 수 있습니다. 이 함수는 초당 백만회 이상 증가하는 카운터의 frequency 값을 반환해 줍니다. 이 frequency 값은 1초에 카운터가 얼마 증가되는가에 대한 값이며, 시스템의 CPU에 따라서 다른 값을 가집니다. 따라서 카운터의 변화량을 Frequency로 나누면 소요된 시간을 구할 수 있습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Microseconds">
+            <summary>경과된 시간을 마이크로 초(micro-seconds, 백만분의 1초) 단위로 가져옵니다.</summary>
+            <remarks>Start 메서드가 호출된 후, Stop 메서드가 호출되어야 유효한 값을 가져올 수 있습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Milliseconds">
+            <summary>경과된 시간을 밀리 초(milli-seconds, 천분의 1초) 단위로 가져옵니다.</summary>
+            <remarks>Start 메서드가 호출된 후, Stop 메서드가 호출되어야 유효한 값을 가져올 수 있습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Seconds">
+            <summary>경과된 시간을 초(second) 단위로 가져옵니다.</summary>
+            <remarks>Start 메서드가 호출된 후, Stop 메서드가 호출되어야 유효한 값을 가져올 수 있습니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.TimeCounter.Snapshot">
+            <summary>경과된 시간의 스넵샷 값을 밀리 초 단위(milli-second, 천분의 일초)로 가져옵니다.</summary>
+            <remarks>SnapShot 속성는 Start 메소드 호출 이후에 Stop 메소드가 호출되지 않더라도 반복적으로 읽을 수 있는 카운터의 스냅샷 값입니다.</remarks>
+        </member>
+        <member name="N:TheOne.Diagnostics.Configuration">
+            <summary>TheOne.Data.Configuration 네임스페이스에는 Configuration XML파일의 &lt;logSection&gt;을 처리하는 데 사용되는 프로그래밍 모델을 제공하는 형식이 포함되어 있습니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.Configuration.EventLogSetting">
+            <summary>윈도우 이벤트 로그를 사용할 때 필요한 이벤스 소스명, 이벤트 로그명등의 정보를 표현합니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.EventLogSetting.#ctor">
+            <summary>EventLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.EventLogSetting.#ctor">
+            <summary>EventLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.EventLogSetting.#ctor(System.String,System.String)">
+            <summary>지정된 이벤트 로그와 이벤트 소스의 기본값을 사용하여 EventLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="eventLog">이벤트 로그입니다.</param>
+            <param name="defaultEventSource">이벤트 소스명입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.EventLogSetting.ToString">
+            <summary>EventLogSetting 클래스에 대한 정보를 문자열로 반환합니다.</summary>
+            <returns>EventLogSetting 클래스에 대한 정보를 문자열로 반환한다.</returns>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.EventLogSetting.DefaultEventSource">
+            <summary>이벤트 로그에서 사용할 기본값으로 정의된 이벤트 소스명을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.EventLogSetting.EventLog">
+            <summary>이벤트 로그에서 사용할 이벤트 로그명을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.Configuration.FileLogSetting">
+            <summary>파일 로그를 사용할 때 필요한 파일의 저장경로, Prefix 명칭등의 정보를 표현합니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.FileLogSetting.#ctor">
+            <summary>FileLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.FileLogSetting.#ctor">
+            <summary>FileLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.FileLogSetting.#ctor(System.String,System.String)">
+            <summary>지정된 디렉토리와 defaultPrefix를 사용하여 FileLogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="directory">로그파일 저장 경로입니다.</param>
+            <param name="defaultPrefix">로그 파일명입니다.</param>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.FileLogSetting.ToString">
+            <summary>FileLogSetting클래스에 대한 정보를 문자열로 반환합니다.</summary>
+            <returns>FileLogSetting클래스에 대한 정보를 문자열로 반환합니다.</returns>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.FileLogSetting.DefaultPrefix">
+            <summary>파일로그에서 사용하는 기본값으로 정의된 파일명을 가져오거나 설정합니다.</summary>
+            <remarks>로그를 기록하는 메서드에서 prefix를 명시하지 않은 경우에 사용됩니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.FileLogSetting.LogDirectory">
+            <summary>파일로그에서 사용하는 파일의 저장경로를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.Configuration.LogSection">
+            <summary>파일 로그와 이벤트 로그에 대한 설정을 관리합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSection.#ctor">
+            <summary>LogSection 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSection.ToString">
+            <summary>LogSection 클래스에 대한 정보를 문자열로 반환합니다.</summary>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSection.EventLogSetting">
+            <summary>EventLogSetting 객체를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSection.FileLogSetting">
+            <summary>FileLogSetting 객체를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.Configuration.LogSectionFactory">
+            <summary>로그 설정 정보들을 관리하는 Factory클래스입니다.</summary>
+            <remarks>NeoDEEX 구성 데이터를 사용하여 파일 로그, 이벤트 로그에 대한 기본 설정을 구성합니다. NeoDEEX 구성 파일이 변경되는 경우 변경된 내용을 다시 반영합니다. LogSection 개체의 내용을 변경하면, 실행중 응용 프로그램의 로그 설정을 변경할 수 있습니다. 하지만 변경된 내용이 NeoDEEX 구성 파일에 저장되지는 않습니다.</remarks>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSectionFactory.Initialize">
+            <summary>LogSectionFactory를 초기화홥니다.</summary>
+            <remarks>Configuration XML 파일에 LogSection 노드가 없으면 기본값으로 설정됩니다. AppSettings 키값이 설정되어 있지 않으면 기본값으로 설정됩니다. 기본값은 FileLogSetting 클래스와 EventLogSetting 클래스를 참조합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSectionFactory.EventLogSetting">
+            <summary>EventLogSetting 객체를 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSectionFactory.FileLogSetting">
+            <summary>FileLogSetting 객체를 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSectionFactory.LogSection">
+            <summary>LogSection 객체를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Diagnostics.Configuration.LogSetting">
+            <summary>로그 정보 클래스들이 공통으로 가져야 하는 속성을 정의하는 기본 클래스를 정의합니다. NeoDEEX 프레임워크 인프라를 지원하며 코드에서는 직접 사용할 수 없습니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSetting.#ctor">
+            <summary>LogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSetting.#ctor">
+            <summary>LogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Diagnostics.Configuration.LogSetting.#ctor(System.Boolean,TheOne.Diagnostics.LogLevel)">
+            <summary>로그 활성화 여부와 최소 로그 레벨을 사용하여 LogSetting 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="enabled">로그 활성화 여부입니다.</param>
+            <param name="baseLogLevel">최소 로그 레벨입니다.</param>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSetting.BaseLogLevel">
+            <summary>최소 로그 레벨을 가져옵니다. 기본값은 Verbose 입니다.</summary>
+            <remarks>BaseLogLevel 보다 심각도가 높은 로그만 기록합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Diagnostics.Configuration.LogSetting.Enabled">
+            <summary>로그 활성화 여부를 가져오거나 설정하며 기본값은 true 입니다.</summary>
+        </member>
+        <member name="N:TheOne.Net">
+            <summary>TheOne.Net 네임스페이스는 Http프로토콜을 사용하여 원격지의 파일을 관리 하기 위한 클래스가 포함됩니다.</summary>
+        </member>
+        <member name="T:TheOne.Net.FileStatusType">
+            <summary>파일 업로드 상태를 정의합니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.FileStatusType.NONUPLOAD">
+            <summary>업로드 되지 않은 상태입니다. (업로드 하기 위해 파일을 선택한 상태입니다.)</summary>
+        </member>
+        <member name="F:TheOne.Net.FileStatusType.UPLOADED">
+            <summary>업로드가 완료된 상태입니다. (원격 파일 서버에 파일을 저장한 상태입니다.)</summary>
+        </member>
+        <member name="F:TheOne.Net.FileStatusType.UPLOADEDNEW">
+            <summary>신규 업로드로 추가한 상태입니다. (데이터 저장 이전입니다.)</summary>
+        </member>
+        <member name="F:TheOne.Net.FileStatusType.UPLOADEDTODELETE">
+            <summary>기존 업로드 파일을 삭제한 상태입니다.(데이터 저장 이전입니다.)</summary>
+        </member>
+        <member name="F:TheOne.Net.FileStatusType.UPLOADNEWTODELETE">
+            <summary>신규 업로드로 추가한 파일을 삭제한 상태입니다. (데이터 저장 이전입니다.)</summary>
+        </member>
+        <member name="T:TheOne.Net.HttpClient">
+            <summary>    URI로 식별되는 리소스에 데이터를 보내고 이 리소스에서 데이터를 받기 위한 메서드를     제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpClient.#ctor">
+            <summary>HttpClient 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpClient.InvokeWeb(System.String)">
+            <summary>URI로 식별되는 리소스에 데이터를 보내고 이 리소스에서 받은 데이터를 문자열 배열로 반환합니다.</summary>
+            <returns>리소스에서 받은 데이터를 문자열로 반환합니다.</returns>
+            <remarks>문자열 내에 개행문자로 포함되어 있는 경우 개행문자를 기준으로 문자열 배열을 생성해서 반환합니다.</remarks>
+            <param name="url">    URI 형식의 호출하고자 하는 주소입니다.     (Url 매개변수를 포함할 수 있습니다.)</param>
+        </member>
+        <member name="T:TheOne.Net.HttpDirectoryInfo">
+            <summary>원격 파일 서버의 디렉토리 정보를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpDirectoryInfo.#ctor">
+            <summary>HttpDirectoryInfo 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpDirectoryInfo.CreateDate">
+            <summary>디렉토리 생성 일자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpDirectoryInfo.DirectoryName">
+            <summary>디렉토리 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpDirectoryInfo.LastWriteDate">
+            <summary>디렉토리 수정 일자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpDirectoryInfo.SubDirectoryPath">
+            <summary>원격 파일 서버에서 해당 디렉토리의 상대 경로를 가져오거나 설정합니다.</summary>
+            <remarks>    원격 파일 서버의 최상위 경로를 기준으로 계산된 상대 경로입니다.     예를 들어 최상위 경로가 D:\Temp로 설정된 파일 서버에서 D:\Temp\A\B 에 해당되는     디렉토리의 상대경로는 \A\B 입니다.</remarks>
+        </member>
+        <member name="T:TheOne.Net.HttpFileInfo">
+            <summary>원격 파일 서버의 파일 정보를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpFileInfo.#ctor">
+            <summary>HttpFileInfo 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.CreateDate">
+            <summary>파일의 생성 일자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.DataKey">
+            <summary>업로드 된 파일의 데이터 키를 가져오거나 설정합니다.</summary>
+            <remarks>삭제한 파일의 실제 데이터를 삭제할 때 사용합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.FileExtension">
+            <summary>파일의 확장자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.FileName">
+            <summary>경로를 포함하지 않는 파일명을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.FileSize">
+            <summary>파일의 크기를 가져오거나 설정합니다. 단위는 byte입니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.FileStatus">
+            <summary>파일의 상태를 가져오거나 설정합니다.</summary>
+            <remarks>해당 파일이 파일 서버에 전송되었는지 등을 표시합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.LastWriteDate">
+            <summary>파일의 마지막 수정 일자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.LocalFilePath">
+            <summary>업로드 할 파일의 로컬 파일 전체 경로를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Net.HttpFileInfo.UploadedFilePath">
+            <summary>원격 파일 서버 상의 저장된 파일명을 가져오거나 설정합니다. 상대 경로를 포함합니다.</summary>
+        </member>
+        <member name="T:TheOne.Net.HttpFileManager">
+            <summary>Http 프로토콜을 통한 업로드/다운로드를 수행하는 원격 파일 관리 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.CheckExtension(System.String)">
+            <summary>파일 확장자를 이용하여 업로드 할 수 있는 파일인지를 검사합니다.</summary>
+            <returns>금지 대상에 포함되어 있는 경우에는 false를 반환하고, 그렇지 않은 경우에는 true를 반환합니다.</returns>
+            <remarks>EXE, DLL, VSB 등 실행 파일은 업로드를 할 수 없습니다.</remarks>
+            <param name="Extension">파일 확장자입니다. 예를 들어 test.txt 파일의 경우 확장자는 .txt 입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.CopyDirectory(System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 폴더를 대상 위치에 복사합니다.</summary>
+            <remarks>    원본 폴더가 하위 폴더를 포함하고 있는 경우 하위 폴더도 함께 복사됩니다.     systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로들     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 폴더 복사 명령을     전달합니다.</remarks>
+            <param name="srcSubUrl">복사할 원본 폴더의 상대 경로입니다.</param>
+            <param name="destSubUrl">대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.CopyFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>원격 파일 서버에 존재하는 파일을 복사합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 파일 복사 명령을     전달합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, srcSubUrl 값은 "\A\B" 이고 srcFileName은     "a.txt"가 됩니다.</remarks>
+            <param name="srcSubUrl">복사할 원본 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="srcFileName">복사할 원본 파일 명입니다.</param>
+            <param name="destSubUrl">대상 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="destFileName">대상 파일 명입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.DeleteDirectory(System.String,System.String)">
+            <summary>원격 파일 서버의 폴더를 삭제합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 폴더 삭제 명령을     전달합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 폴더의 위치가 C:\Temp\A\B\     이라면, subUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="subUrl">삭제하려는 대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.DeleteFile(System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 파일을 삭제합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 파일 삭제 명령을     전달합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, subUrl 값은 "\A\B" 이고 fileName은 "a.txt"가     됩니다.</remarks>
+            <param name="subUrl">삭제하려는 파일이 포함된 폴더의 상대 경로입니다.</param>
+            <param name="fileName">삭제하려는 파일의 이름입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.DownloadFile(System.String,System.String,System.Int64,System.String,System.Int64,System.String)">
+            <summary>원격 파일 서버에 있는 파일을 로컬 컴퓨터로 다운로드 합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에서 파일을 다운로드 합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, subUrl 값은 "\A\B" 이고 fileName은 "a.txt"가     됩니다.</remarks>
+            <param name="subUrl">다운로드 할 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="fileName">다운로드 할 파일의 이름입니다.</param>
+            <param name="index">파일 조각에 대한 인덱스입니다.</param>
+            <param name="saveFileFullPath">다운로드 한 파일을 저장할, 경로를 포함한 전체 파일 명입니다.</param>
+            <param name="fileSize">파일의 크기입니다. (사용하지 않습니다.)</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.DownloadToImage(System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean,System.String)">
+            <summary>원격 파일 서버에 있는 이미지를 다운로드하여 Image 개체를 반환합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에서 이미지를 다운로드 합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.jpg 이라면, subUrl 값은 "\A\B" 이고 fileName은 "a.jpg"가     됩니다.</remarks>
+            <param name="subUrl">다운로드 할 이미지를 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="fileName">다운로드 할 이미지 파일의 이름입니다.</param>
+            <param name="imageWidth">이미지의 너비 입니다.</param>
+            <param name="imageHeight">이미지의 높이 입니다.</param>
+            <param name="fileSize">이미지 파일의 크기 입니다.</param>
+            <param name="AllowAutoSize">이미지 크기를 자동 조절할 지 여부입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.GetDirectoryInfo(System.String,System.String)">
+            <summary>원격 파일 서버에 존재하는 디렉토리의 정보를 반환합니다.</summary>
+            <returns>디렉토리에 대한 정보를 포함하는 HttpDirectoryInfo 객체입니다.</returns>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 지정한 폴더의 정보를     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 폴더의 위치가 C:\Temp\A\B 이라면,     subUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="subUrl">대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.GetDirList(System.String,System.String)">
+            <summary>원격 파일 서버에 존재하는 특정 폴더의 하위 폴더 목록을 반환합니다.</summary>
+            <returns>원격 파일 서버에 존재하는 대상 폴더의 하위 폴더 목록에 대한 컬렉션입니다.</returns>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 지정한 폴더의 하위 폴더 목록을     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 폴더의 위치가 C:\Temp\A\B 이라면,     subUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="subUrl">대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.GetFileHandleURL(System.String)">
+            <summary>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     반환합니다.</summary>
+            <returns>원격 파일 관리 서비스의 경로입니다.</returns>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 를 반환합니다.</remarks>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.GetFileInfo(System.String,System.String,System.String)">
+            <summary>원격 파일 서버에 존재하는 파일의 정보를 반환합니다.</summary>
+            <returns>파일에 대한 정보를 포함하는 HttpDirectoryInfo 객체입니다.</returns>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 지정한 파일의 정보를     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, subUrl 값은 "\A\B" 이고 fileName은 "a.txt"가     됩니다.</remarks>
+            <param name="subUrl">대상 파일이 포함된 폴더의 상대 경로입니다.</param>
+            <param name="fileName">대상 파일의 이름입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.GetFileListFromDir(System.String,System.String)">
+            <summary>원격 파일 서버의 지정한 폴더에 존재하는 파일 목록을 반환합니다.</summary>
+            <returns>원격 파일 서버에서 지정한 폴더에 존재하는 파일들의 목록입니다.</returns>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 지정한 폴더에 존재하는 파일 목록을     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 폴더의 위치가 C:\Temp\A\B     이라면, subUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="subUrl">대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.MoveDirectory(System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 폴더를 대상 위치로 이동합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 폴더 이동 명령을     전달합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, srcSubUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="srcSubUrl">이동할 원본 폴더의 상대 경로입니다.</param>
+            <param name="destSubUrl">대상 폴더 상대 경로 입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.MoveFile(System.String,System.String,System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 파일를 대상 위치로 이동합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 파일 이동 명령을     전달합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, srcSubUrl 값은 "\A\B" 이고 srcFileName은     "a.txt"가 됩니다.</remarks>
+            <param name="srcSubUrl">이동할 원본 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="srcFileName">이동할 원본 파일 명입니다.</param>
+            <param name="destSubUrl">대상 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="destFileName">대상 파일 명입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.RenameDirectory(System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 폴더 이름을 변경합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 폴더 이름 변경을     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, srcSubUrl 값은 "\A\B" 가 됩니다.</remarks>
+            <param name="srcSubUrl">변경할 원본 폴더의 상대 경로입니다.</param>
+            <param name="destSubUrl">대상 폴더의 상대 경로입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.RenameFile(System.String,System.String,System.String,System.String)">
+            <summary>원격 파일 서버의 파일 이름을 변경합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 파일 이름 변경을     요청합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, subUrl 값은 "\A\B" 이고 srcFileName은     "a.txt"가 됩니다.</remarks>
+            <param name="subUrl">변경할 원본 파일을 포함하는 폴더의 상대 경로입니다.</param>
+            <param name="srcFileName">변경할 원본 파일 명입니다.</param>
+            <param name="destFileName">대상 파일 명입니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.StopExecution">
+            <summary>파일 업로드/다운로드 실행을 중지합니다.</summary>
+        </member>
+        <member name="M:TheOne.Net.HttpFileManager.UploadFile(System.String,System.String,System.String,System.Int64,System.String)">
+            <summary>선택한 파일을 원격 파일 서버로 업로드합니다.</summary>
+            <remarks>    systemid를 이용하여 NeoDEEX 구성 데이터에 정의된 원격 파일 관리 서비스의 경로를     선택합니다. 예를 들어 systemid가 "TMP" 인 경우 "TMPFileHandlerUrl" 값을 사용하여     원격 파일을 관리하는 서비스의 Url 경로를 가져옵니다. systemid가 NULL인 경우 기본 설정인     "FileHandlerUrl" 키를 사용합니다.     위 예제에서는 systemid가 "TMP"인 경우     http://localhost/TMP/FileHandler.aspx 에게 파일을 업로드 합니다.     원격 파일 서버의 최상위 경로가 C:\Temp 이고, 실제 원본 파일의 위치가     C:\Temp\A\B\a.txt 이라면, subUrl 값은 "\A\B" 이고 fileName은 "a.txt"가     됩니다.</remarks>
+            <param name="subUrl">원격 파일 서버의 대상 위치에 대한 상대 경로입니다.</param>
+            <param name="fileName">업로드하려는 파일 이름입니다.</param>
+            <param name="fileFullPath">로컬 컴퓨터에 있는 대상 파일의 전체 이름입니다.</param>
+            <param name="readStartIndex">업로드 하려는 파일의 시작 위치 입니다. 0이 아니면 이어 올리기를 시도합니다.</param>
+            <param name="systemid">원격 파일 관리 서비스의 경로를 선택하기 위한 키 값입니다.</param>
+        </member>
+        <member name="P:TheOne.Net.HttpFileManager.NoUploadExtensions">
+            <summary>업로드 할 수 없는 파일 확장자 목록을 설정하거나 가져옵니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CHUNK_SIZE">
+            <summary>파일 업로드시에 한번에 전송할 파일의 크키를 가져오거나 설정합니다. 기본값은 64KB 입니다.</summary>
+            <remarks>파일 업로드시에 일정 크기 단위로 파일을 전송하는데, 한번에 전송할 파일의 크키를 정의합니다.</remarks>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDCOPY">
+            <summary>파일 및 폴더 복사 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDDELETE">
+            <summary>파일 및 폴더의 삭제 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDDOWNLOAD">
+            <summary>파일 다운로드 명령을 나태닙니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDGETINFO">
+            <summary>파일 및 폴더의 정보 요청 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDGETLIST">
+            <summary>파일 및 하위 폴더 목록 요청 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDMOVE">
+            <summary>파일 및 폴더 이동 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDRENAME">
+            <summary>파일 및 폴더 이름 변경 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.CMDUPLOAD">
+            <summary>파일 업로드 명령을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.DIRTYPE">
+            <summary>명령의 대상이 폴더임을 나타냅니다.</summary>
+        </member>
+        <member name="F:TheOne.Net.HttpFileManager.FILETYPE">
+            <summary>명령의 대상이 파일임을 나타냅니다.</summary>
+        </member>
+        <member name="E:TheOne.Net.HttpFileManager.FileHandlerTickEvent">
+            <summary>파일 업로드/다운로드 작업을 통해 데이터 전체 또는 일부를 성공적으로 전송하면 발생합니다</summary>
+            <remarks>    64KB 씩 분할 업로드/다운로드 하는 경우 64KB 업로드 후 이벤트가 발생합니다.     파일 업로드/다운로드 단위는 CHUNK_SIZE 속성으로 설정할 수 있습니다.</remarks>
+        </member>
+        <member name="T:TheOne.Net.FileHandlerTick">
+            <summary>    HttpFileManager의 FileHandlerTickEvent 이벤트를 처리할 메서드를     나타냅니다.</summary>
+            <param name="fileName">업로드 또는 다운로드를 수행하는 파일명입니다.</param>
+            <param name="index">업로드 또는 다운로드 된 크기입니다.</param>
+        </member>
+        <member name="N:TheOne.Resources">
+            <summary>TheOne.Resources 네임스페이스는 응용 프로그램에 사용되는 다양한 culture 관련 리소스를 개발자가 만들고 저장하고 관리할 수 있도록 하는 클래스와 인터페이스를 제공합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.EmbeddResourceProvider">
+            <summary>특정 어셈블리에 포함된 리소스를 가져오기 위한 리소스 공급자를 나타냅니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.#ctor">
+            <summary>EmbeddResourceProvider 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetImage">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetImage(System.String)">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환한다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetImage(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetStream">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetStream(System.String)">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetStream(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetString">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetString(System.String)">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+            <returns>호출자의 현재 문화권 설정에 대해 지역화된 리소스의 값을 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.EmbeddResourceProvider.GetString(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 String 리소스의 값을 가져옵니다.</summary>
+            <returns>지정된 문화권에 대해 지역화된 리소스의 값입니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="T:TheOne.Resources.ResourceHelper">
+            <summary>리소스를 반환하는 정적 메서드를 제공합니다.</summary>
+            <remarks>    NeoDEEX 구성요소 파일의 설정에 따라 ResourceProvider 인스턴스를 생성하고 해당     ResourceProvider 인스턴스의 GetXXXX 메서드를 호출하여 리소스 데이터를 가져옵니다.     기본 제공하는 리소스 프로바이더는 EmbeddResourceProvider와     UrlResourceProvider 두 클래스를 제공합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.#ctor">
+            <summary>ResourceHelper 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImage">
+            <summary>지정된 리소스 이름을 사용하여 Image 객체를 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImage(System.String)">
+            <summary>지정된 리소스 이름을 사용하여 Image 객체를 반환합니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImage(System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름의 Image 객체를 반환합니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImage(System.String,System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름과 언어타입을 사용하여 Image 객체를 반환합니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="language">소스에 대한 문화권을 나타내는 언어 타입입니다.(Korea → ko, English → en,...)</param>
+            <param name="resourceName">가져올 리소스 이름</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImageFromCallingAssembly">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 이미지를 반환 합니다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImageFromCallingAssembly(System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 이미지를 반환 합니다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+            <returns>이미지 객체를 반환합니다.</returns>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImageFromCallingAssembly(System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 이미지를 반환 합니다.</summary>
+            <returns>이미지 객체를 반환합니다.</returns>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetImageFromCallingAssembly(System.String,System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 이미지를 반환 합니다.</summary>
+            <returns>이미지 객체를 반환합니다.</returns>
+            <param name="language">2자리 언어 코드(en, ko, ...)입니다.</param>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStream">
+            <summary>지정된 리소스 이름을 사용하여 Stream 객체를 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStream(System.String)">
+            <summary>지정된 리소스 이름을 사용하여 Stream 객체를 반환합니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStream(System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름의 Stream 객체를 반환합니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStream(System.String,System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름과 언어타입을 사용하여 Stream 객체를 반환합니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="language">소스에 대한 문화권을 나타내는 언어 타입(Korea → ko, English → en,...)입니다.</param>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStreamFromCallingAssembly">
+            <summary>호출한 객체를 포함한 Assembly의 Stream 개체를 반환 합니다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStreamFromCallingAssembly(System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 Stream 개체를 반환 합니다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+            <returns>이미지 객체를 반환합니다.</returns>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStreamFromCallingAssembly(System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 Stream 개체를 반환합니다.</summary>
+            <returns>스트림 객체를 반환합니다.</returns>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStreamFromCallingAssembly(System.String,System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 Stream 개체를 반환합니다.</summary>
+            <returns>파일 스트림객체를 반환합니다.</returns>
+            <param name="language">2자리 언어 코드(en, ko, ...)입니다.</param>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetString">
+            <summary>지정된 리소스 이름을 사용하여 String 리소스의 값을 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetString(System.String)">
+            <summary>지정된 리소스 이름을 사용하여 String 리소스의 값을 반환합니다.</summary>
+            <returns>지정된 문화권에 대해 지역화된 리소스의 값을 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetString(System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름의 String 리소스의 값을 반환합니다.</summary>
+            <returns>호출자의 현재 문화권 설정에 대해 지역화된 리소스의 값을 반환한다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetString(System.String,System.String,System.String)">
+            <summary>NeoDEEX 구성요소 파일에 등록된 공급자 이름에 해당 프로바이더에서 제공하는 리소스에서 지정된 리소스 이름과 언어타입을 사용하여 String 리소스의 값을 반환합니다.</summary>
+            <returns>호출자의 현재 문화권 설정에 대해 지역화된 리소스의 값을 반환합니다.</returns>
+            <param name="providerName">NeoDEEX 구성요소 파일에 등록된 공급자 이름입니다.</param>
+            <param name="language">소스에 대한 문화권을 나타내는 언어 타입(Korea → ko, English → en,...)입니다.</param>
+            <param name="resourceName">가져올 리소스 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStringFromCallingAssembly">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 문자열를 반환 한다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStringFromCallingAssembly(System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 문자열를 반환 한다. 단, 리소스 베이스명은 [Assemlby명.Resources.Default]로 사용합니다.</summary>
+            <returns>문자열을 반환합니다.</returns>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStringFromCallingAssembly(System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 문자열를 포맷팅 하여 반환 합니다.</summary>
+            <returns>문자열을 반환합니다.</returns>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceHelper.GetStringFromCallingAssembly(System.String,System.String,System.String)">
+            <summary>호출한 객체를 포함한 Assembly의 포함 리소스 문자열를 포맷팅 하여 반환 합니다.</summary>
+            <returns>문자열을 반환합니다.</returns>
+            <param name="language">2자리 언어 코드(en, ko, ...)입니다.</param>
+            <param name="baseName">리소스 베이스 명입니다.</param>
+            <param name="resourceName">리소스 명입니다.</param>
+        </member>
+        <member name="T:TheOne.Resources.ResourceProvider">
+            <summary>리소스 공급자를 만드는 클래스에 대한 기본 추상(abstract) 클래스입니다.</summary>
+            <remarks>기본 리소스 공급자(EmbeddResourceProvider, UrlResourceProvider) 이외의 공급자를 제공하고자 할 경우는 ResourceProvider를 파생하여 구현합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetImage">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetImage(System.String)">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetImage(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetStream">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetStream(System.String)">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetStream(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetString">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetString(System.String)">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+            <returns>호출자의 현재 문화권 설정에 대해 지역화된 리소스의 값을 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProvider.GetString(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 String 리소스의 값을 가져옵니다.</summary>
+            <returns>지정된 문화권에 대해 지역화된 리소스의 값입니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="P:TheOne.Resources.ResourceProvider.Parameters">
+            <summary>ResourceProvider에 전달하는 매개변수 컬렉션을 가져오거나 설정을 합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.ResourceProviderFactory">
+            <summary>NeoDEEX 구성파일에 정의된 리소스 공급자의 인스턴스를 생성하고 관리하는 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProviderFactory.CreateResourceProvider">
+            <summary>NeoDEEX 구성파일의 resourceSection섹션의 defaultProvider 속성에 설정된 이름으로 ResourceProvider의 인스턴스를 만들고 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProviderFactory.CreateResourceProvider">
+            <summary>NeoDEEX 구성파일의 resourceSection섹션의 defaultProvider 속성에 설정된 이름으로 ResourceProvider의 인스턴스를 만들고 반환합니다.</summary>
+            <returns>ResourceProvider 객체를 반환합니다.</returns>
+        </member>
+        <member name="M:TheOne.Resources.ResourceProviderFactory.CreateResourceProvider(System.String)">
+            <summary>NeoDEEX 구성파일에 정의된 공급자의 이름을 사용하여 ResourceProvider의 인스턴스를 만들고 반환합니다.</summary>
+            <returns>ResourceProvider 객체를 반환합니다.</returns>
+            <param name="providerName">공급자 이름입니다.</param>
+        </member>
+        <member name="T:TheOne.Resources.UrlResourceHandlerHelper">
+            <summary>UrlResourceProvider에서 설정된 url을 통하여 리소스를 가져오기 위하여 Helper를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceHandlerHelper.ResourceBinaryWrite(System.IO.Stream,System.String,System.String,System.String)">
+            <summary>이미지 및 기타 바이너리 리소스를 파일로 기록합니다.</summary>
+            <returns>파일 리소스 존재 여부를 반환한다. 파일이 존재하지 않으면 false를 반환하고 그렇지 않으면 true를 반환합니다.</returns>
+            <param name="stream">파일을 기록하기 위한 Stream객체입니다.</param>
+            <param name="resourceBaseDirectory">파일 리소스의 디렉토리 경로입니다.</param>
+            <param name="resourceFileName">파일 리소스 명(확장자 포함)입니다.</param>
+            <param name="language">언어 타입(en, ko, zh, ...)입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceHandlerHelper.ResourceStringsWrite(System.IO.Stream,TheOne.Resources.UrlResourceStrings)">
+            <summary>문자열 리소스을 지정된 Stream를 사용하여 serialize 합니다.</summary>
+            <param name="stream">serialize에 사용되는 Stream입니다.</param>
+            <param name="urlResourceStrings">serialize할 UrlResourceStrings 객체입니다.</param>
+        </member>
+        <member name="F:TheOne.Resources.UrlResourceHandlerHelper.LanguageParamerKey">
+            <summary>언어 타입(en, ko, zh, ...)을 전송하기 위한 키를 정의한 상수입니다.</summary>
+        </member>
+        <member name="F:TheOne.Resources.UrlResourceHandlerHelper.ResourceNameParameterKey">
+            <summary>리소스 명을 전송하기 위한 키를 정의한 상수입니다.</summary>
+        </member>
+        <member name="F:TheOne.Resources.UrlResourceHandlerHelper.ResourceTypeBinary">
+            <summary>파일 리소스 타입 키를 정의한 상수입니다.</summary>
+        </member>
+        <member name="F:TheOne.Resources.UrlResourceHandlerHelper.ResourceTypeParameterKey">
+            <summary>리소스 타입을 전송하기 위한 키를 정의한 상수입니다.</summary>
+        </member>
+        <member name="F:TheOne.Resources.UrlResourceHandlerHelper.ResourceTypeStrings">
+            <summary>문자 리소스 타입 키를 정의한 상수입니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.UrlResourceProvider">
+            <summary>NeoDDEX 구성요소 파일에 설정된 Url(리소스를 가져오는 웹페이지)를 통해 리소스를 가져오기 위한 리소스 공급자를 나타냅니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.#ctor">
+            <summary>UrlResourceProvider 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetImage">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetImage(System.String)">
+            <summary>지정된 리소스명을 사용하여 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환합니다</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetImage(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Image 객체를 가져옵니다.</summary>
+            <returns>Image 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetStream">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetStream(System.String)">
+            <summary>지정된 리소스명을 사용하여 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetStream(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 Stream 객체를 가져옵니다.</summary>
+            <returns>Stream 객체를 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetString">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetString(System.String)">
+            <summary>지정된 리소스명을 사용하여 String 리소스의 값을 가져옵니다.</summary>
+            <returns>호출자의 현재 문화권 설정에 대해 지역화된 리소스의 값을 반환합니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceProvider.GetString(System.String,System.Globalization.CultureInfo)">
+            <summary>지정된 문화권에 대해 지역화된 String 리소스의 값을 가져옵니다.</summary>
+            <returns>지정된 문화권에 대해 지역화된 리소스의 값입니다.</returns>
+            <param name="resourceName">가져올 리소스의 이름입니다.</param>
+            <param name="cultureInfo">리소스에 대한 문화권을 나타내는 CultureInfo 객체입니다.</param>
+        </member>
+        <member name="T:TheOne.Resources.UrlResourceStrings">
+            <summary>UrlResourceProvider에서 사용되는 매개변수 아이템을 나타냅니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceStrings.#ctor">
+            <summary>UrlResourceStrings 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.UrlResourceStrings.Strings">
+            <summary>URL 리소스 공급자의 매개변수 아이템의 컬렉션을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem">
+            <summary>URL 리소스 공급자의 매개변수 아이템을 나타냅니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem.#ctor">
+            <summary>UrlResourceStringItem클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem.#ctor">
+            <summary>UrlResourceStringItem클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem.#ctor(System.String,System.String)">
+            <summary>지정된 이름과 값을 사용하여 UrlResourceStringItem클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="name">이름입니다.</param>
+            <param name="value">값입니다.</param>
+        </member>
+        <member name="P:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem.Name">
+            <summary>리소스의 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.UrlResourceStrings+UrlResourceStringItem.Value">
+            <summary>리소스 공급자에게 전달되는 매개변수의 값을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="N:TheOne.Resources.Configuration">
+            <summary>TheOne.Resources.Configuration 네임스페이스는 구성요소 파일에 ResourceProvider를 설정하거나 ResourceSection과 ResourceProvider에 전달되는 매개변수를 관리합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.Configuration.ParameterSetting">
+            <summary>리소스 공급자에 전달되는 매개변수의 이름과 값을 저장하는 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ParameterSetting.#ctor">
+            <summary>ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ParameterSetting.#ctor">
+            <summary>ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ParameterSetting.#ctor(System.String,System.String)">
+            <summary>지정된 이름과 값을 사용하여 ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="name">이름입니다.</param>
+            <param name="value">값입니다.</param>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ParameterSetting.Name">
+            <summary>리소스 공급자에 전달되는 매개변수의 이름를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ParameterSetting.Value">
+            <summary>리소스 공급자에 전달되는 매개변수의 값을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.Configuration.ResourceProviderSetting">
+            <summary>NeoDEEX 구성요소 파일에 리소스 공급자를 설정합니다. Configuration의 ResourceProvider 노드로 serialize 또는 deserialize 됩니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ResourceProviderSetting.#ctor">
+            <summary>ResourceProviderSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceProviderSetting.Name">
+            <summary>ResourceProvider 클래스에서 파생된 리소스 공급자의 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceProviderSetting.Parameters">
+            <summary>리소스 공급자에 전달하는 매개변수 컬렉션을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceProviderSetting.Type">
+            <summary>ResourceProvider 클래스에서 파생된 리소스 공급자의 클래스 타입정보를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.Configuration.ResourceSection">
+            <summary>리소스 공급자에 대한 설정을 관리합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ResourceSection.#ctor">
+            <summary>ResourceSection 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ResourceSection.Deserialize(System.Xml.XmlReader)">
+            <summary>ResourceSection객체를 deserialize 합니다.</summary>
+            <returns>ResourceSection 객체를 반환합니다.</returns>
+            <param name="reader">XmlReader 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ResourceSection.Serialize(System.Xml.XmlWriter,TheOne.Resources.Configuration.ResourceSection)">
+            <summary>ResourceSection객체를 serailize 합니다.</summary>
+            <param name="writer">XmlWriter 객체입니다.</param>
+            <param name="section">ResourceSection 객체입니다.</param>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceSection.DefaulstResource">
+            <summary>기본 리소스 공급자로 사용할 공급자의 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceSection.Resources">
+            <summary>리소스 공급자의 컬렉션을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Resources.Configuration.ResourceSectionFactory">
+            <summary>리소스 공급자 컬렉션 정보들을 관리하는 Factory 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Resources.Configuration.ResourceSectionFactory.Initialize">
+            <summary>ResourceSectionFactory를 초기화합니다.</summary>
+            <remarks>NeoDEEX 구성요소 파일의 &lt;ResourceSection&gt; XML 노드의 정보를 이용해서 ResourceProvider클래스에서 파생된 객체를 만든다.</remarks>
+        </member>
+        <member name="P:TheOne.Resources.Configuration.ResourceSectionFactory.ResourceSection">
+            <summary>ResourceSection 객체를 가져옵니다.</summary>
+        </member>
+        <member name="N:TheOne.Security">
+            <summary>TheOne.Security 네임스페이스는 사용자 정보 및 권한을 관리하고 인증오류와 예외오류에 대한 예외클래스 관리 및 암호화와 복호화를 위한 Helper와 알고리즘을 제공합니다.</summary>
+        </member>
+        <member name="T:TheOne.Security.AuthenticationException">
+            <summary>사용자 인증 오류에 대한 예외 클래스를 나타냅니다.</summary>
+            <remarks>    일반적으로 다음과 같은 상황에서 예외가 발생합니다.                       사용자 인증을 수행하는 과정에서 예외 발생         인증되지 않은 사용자가 인증을 요구하는 컨트롤에 접근하는 경우 발생         인증되지 않은 사용자가 인증을 요구하는 서비스를 호출하는 경우 발생     </remarks>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor">
+            <summary>AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor">
+            <summary>AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Serialize된 데이터를 사용하여 AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="info">Serialize된 객체 데이터를 유지하는 객체입니다.</param>
+            <param name="context">소스 또는 대상에 대한 컨텍스트 정보입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor(System.String)">
+            <summary>지정된 오류 메시지를 사용하여 AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor(System.String,System.Exception)">
+            <summary>지정된 오류 메시지와 예외 객체를 사용하여 AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="innerException">예외 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor(System.String,System.Int32)">
+            <summary>지정된 오류 메시지와 오류코드를 사용하여 AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="code">오류 코드입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthenticationException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>지정된 오류 메시지, 오류 코드, 예외객체를 사용하여 AuthenticationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="code">오류 코드입니다.</param>
+            <param name="innerException">예외 객체입니다.</param>
+        </member>
+        <member name="T:TheOne.Security.AuthorizationException">
+            <summary>사용자 권한이 만족하지 않거나 없는 경우 발생하는 예외를 나타냅니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor">
+            <summary>AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor">
+            <summary>AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Serialize된 데이터를 사용하여 AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="info">Serialize된 객체 데이터를 유지하는 객체입니다.</param>
+            <param name="context">소스 또는 대상에 대한 컨텍스트 정보입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor(System.String)">
+            <summary>지정된 오류 메시지를 사용하여 AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor(System.String,System.Exception)">
+            <summary>지정된 오류 메시지와 예외 객체를 사용하여 AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="innerException">예외 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor(System.String,System.Int32)">
+            <summary>지정된 오류 메시지와 오류코드를 사용하여 AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="code">오류 코드입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.AuthorizationException.#ctor(System.String,System.Int32,System.Exception)">
+            <summary>지정된 오류 메시지, 오류 코드, 예외객체를 사용하여 AuthorizationException 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="message">오류를 설명하는 메시지입니다.</param>
+            <param name="code">오류 코드입니다.</param>
+            <param name="innerException">예외 객체입니다.</param>
+        </member>
+        <member name="T:TheOne.Security.CryptoHelper">
+            <summary>암호화/복호화를 수행하기 위한 Helper 메서드를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Decrypt">
+            <summary>데이터를 복호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Decrypt(System.String)">
+            <summary>데이터를 복호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+            <returns>복호화된 데이터 배열을 반환합니다.</returns>
+            <param name="inputText">복호화를 위한 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Decrypt(System.Byte[])">
+            <summary>데이터를 복호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+            <returns>복호화된 데이터 배열을 반환합니다.</returns>
+            <param name="inputBytes">복호화를 위한 데이터 배열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Decrypt(System.IO.Stream,System.IO.Stream)">
+            <summary>Stream 내용을 복호화하여 그 결과를 Stream에 기록합니다.</summary>
+            <param name="inputStream">암호화된 내용을 읽을 MemoryStream입니다.</param>
+            <param name="outputStream">복호환된 내용을 기록할 MemoryStream입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.DecryptObject(System.Byte[])">
+            <summary>Object)에 의해 암호화된 데이터를 복호화 합니다.</summary>
+            <returns>복호화되어 재구성된 Object객체를 반환합니다.</returns>
+            <param name="inputBytes">복호화를 위한 데이터 배열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.DecryptText">
+            <summary>데이터를 복호화 하고 그 결과를 문자열로 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.DecryptText(System.String)">
+            <summary>데이터를 복호화 하고 그 결과를 문자열로 반환합니다.</summary>
+            <returns>복호화된 문자열을 반환합니다.</returns>
+            <param name="inputText">복호화를 위한 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.DecryptText(System.Byte[])">
+            <summary>데이터를 복호화 하고 그 결과를 문자열로 반환합니다.</summary>
+            <returns>복호화된 문자열입니다.</returns>
+            <param name="inputBytes">복호화를 위한 데이터 배열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Encrypt">
+            <summary>데이터를 암호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Encrypt(System.String)">
+            <summary>데이터를 암호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+            <returns>암호화된 데이터 배열을 반환한다.</returns>
+            <param name="inputText">암호화를 위한 문자열</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Encrypt(System.Byte[])">
+            <summary>데이터를 암호화 하고 그 결과를 데이터 배열로 반환합니다.</summary>
+            <returns>암호화된 데이터 배열을 반환합니다.</returns>
+            <param name="inputBytes">암호화를 위한 데이터 배열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.Encrypt(System.IO.Stream,System.IO.Stream)">
+            <summary>Stream을 암호화 하고 그 결과를 Stream으로 생성합니다.</summary>
+            <returns>암호화 된 MemoryStream입니다.</returns>
+            <param name="inputStream">암호화를 위한 MemoryStream입니다.</param>
+            <param name="outputStream">암호화된 결과를 위한 MemoryStream입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.EncryptBase64">
+            <summary>데이터를 암호화 하고 그 결과를 Base64로 인코딩 하여 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.EncryptBase64(System.String)">
+            <summary>데이터를 암호화 하고 그 결과를 Base64로 인코딩 하여 반환합니다.</summary>
+            <returns>암호화된 Base64 문자열을 반환합니다.</returns>
+            <param name="inputText">암호화를 위한 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.EncryptBase64(System.Byte[])">
+            <summary>데이터를 암호화 하고 그 결과를 Base64로 인코딩 하여 반환합니다.</summary>
+            <returns>암호화된 Base64 문자열을 반환합니다.</returns>
+            <param name="inputBytes">암호화를 위하 데이터 배열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.CryptoHelper.EncryptObject(System.Object)">
+            <summary>임의의 객체를 암호화 합니다.</summary>
+            <returns>암호화된 데이터 배열을 반환합니다.</returns>
+            <param name="data">암호화를 위한 객체입니다.</param>
+        </member>
+        <member name="P:TheOne.Security.CryptoHelper.KeyProvider">
+            <summary>Key/IV, Symmetric 알고리즘을 제공하는 공급자를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Security.CryptoKeyProvider">
+            <summary>암/복호화를 위한 Key/IV, Symmetric 알고리즘을 제공하는 기본 추상(abstrac) 클래스를 정의합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.CryptoKeyProvider.GetSymmetricAlgorithm">
+            <summary>암/복호화에 사용할 Symmetric 알고리즘을 반환합니다.</summary>
+            <returns>Symmetric 알고리즘을 반환합니다.</returns>
+        </member>
+        <member name="M:TheOne.Security.CryptoKeyProvider.GetSymmetricIV">
+            <summary>Symmetric IV를 반환합니다.</summary>
+            <returns>Symmetric IV Byte 배열을 반환합니다.</returns>
+        </member>
+        <member name="M:TheOne.Security.CryptoKeyProvider.GetSymmetricKey">
+            <summary>Symmetric Key를 반환합니다.</summary>
+            <returns>Symmetric Key Byte 배열을 반환합니다.</returns>
+        </member>
+        <member name="T:TheOne.Security.DefaultDenialSecurityContext">
+            <summary>권한 검사를 수행하는 기본 권한 검사 객체로서 모든 권한을 허용하지 않습니다. 즉, 아무런 권한이 없는 SecurityContext입니다.</summary>
+            <remarks>CRUD 권한에 대해 모두 허용하지 않는 보안 컨텍스트 객체로서 권한 검사에 실패 하는 경우 설정되는 권한 컨텍스트입니다.</remarks>
+        </member>
+        <member name="M:TheOne.Security.DefaultDenialSecurityContext.#ctor">
+            <summary>모든 권한을 허용하지 않는 기본 DefaultDenialSecurityContext클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="T:TheOne.Security.DefaultSecurityContext">
+            <summary>권한 검사를 수행하는 기본 권한 검사 객체로서 모든 권한을 허용합니다.</summary>
+            <remarks>CRUD 권한에 대해 모두 허용하는 보안 컨텍스트 객체로서 개발시에 테스트 용도로 사용하거나, 권한 검사를 하지 않는 경우에 사용되는 권한 컨텍스트 입니다.</remarks>
+        </member>
+        <member name="M:TheOne.Security.DefaultSecurityContext.#ctor">
+            <summary>모든 권한을 허용하는 기본 DefaultSecurityContext클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="T:TheOne.Security.SecurityContext">
+            <summary>사용자가 특정 화면에 대하여 어떤 권한을 가지는지 나타냅니다.</summary>
+            <remarks>    NeoDEEX 프레임워크는 이 클래스를 통해 사용자의 권한(ACL)을 정의하고 이 권한에 의해 화면 상에서     조회(CanSelect), 추가(CanInsert), 수정(CanUpdate), 삭제(CanDelete) 권한이     있는지 판단합니다. 화면을 열 수 있는 권한(CanOpen)은 조회/추가/수정/삭제 권한 중 하나라도 권한이     있다면 해당 권한이 있는 것으로 인정되며 화면에 대한 저장 권한(CanSave)은 추가/수정/삭제 권한 중 하나가     있다면 저장 권한이 있는 것으로 인정됩니다.     SecurityContext 클래스는 권한을 나타내기 위해 표준적으로 조회/추가/수정/삭제 권한을     나타내는 기본 권한과 비트 인코딩된 정수를 사용하는 확장 권한 그리고 임의의 용도로 어플리케이션 내에서 사용할 수     있는 확장 문자열 권한을 제공합니다.     기본 권한은 CanSelect, CanInsert, CanUpdate, CanDelete 네 개의 속성에 의해     표시되며 어플리케이션 내에서 임의로 지정하여 사용할 수 있는 확장 권한은 SecurityContext 클래스의     인덱서와 GetExtACL 메서드를 통해 액세스 할 수 있습니다.     확장 권한은 32비트 정수에 의해 인코딩 된 것으로써 각 비트에 권한을 설정하여 최대 32종류의 권한을     설정할 수 있습니다. 확장 권한의 정의는 어플리케이션에서 정의하여 사용해야만 합니다.     비슷하게 확장 문자열 권한은 ture 와 false 가 아닌 복잡한 권한 묘사를 위해     제공되는 것으로써 이 역시 어플리케이션이 이 문자열에 들어갈 값과 그 값의 의미를 정의하여 사용해야     합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.#ctor">
+            <summary>표준 권한인 CRUD(Create, Retrieve, Update, Delete) 정보를 사용하여 SecurityContext 클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>표준 권한인 CRUD(Create, Retrieve, Update, Delete) 정보를 사용하여 SecurityContext 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="create">생성 권한입니다.</param>
+            <param name="retrieve">조회 권한입니다.</param>
+            <param name="update">수정 권한입니다.</param>
+            <param name="delete">삭제 권한입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>기본 ACL 정보, 확장 ACL 정보를 사용하여 SecurityContext 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="basicACL">기본 권한입니다.</param>
+            <param name="extACL">확장 권한입니다.</param>
+            <param name="strACL">확장 문자열 권한입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.#ctor(System.String)">
+            <summary>문자열로 Serialize 된 ACL 정보를 사용하여 SecurityContext 클래스의 새 인스턴스를 초기화합니다.</summary>
+            <remarks>VersionIndependentserailize 메서드 호출의 결과로 반환된 문자열만을 사용하여 객체를 초기화 합니다.</remarks>
+            <param name="aclString">문자열로 Serialize된 SecurityContext 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.GetACLBit(System.Int32,System.Int32)">
+            <summary>확장 권한 정수의 특정 위치의 권한을 반환합니다.</summary>
+            <returns>특정 위치의 권한이 0이 아니면 true를 반환하고 그렇지 않으면 false를 반환합니다.</returns>
+            <param name="index">확장 권한 값 위치입니다.</param>
+            <param name="extACL">확장 권한 정수입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.GetExtACL(System.Int32)">
+            <summary>특정 위치의 확장 권한 값을 반환합니다.</summary>
+            <returns>특정 위치에 해당하는 확장 권한 값을 반환합니다.</returns>
+            <param name="index">확장 권한 값의 위치입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.GetJSONString">
+            <summary>자바 스크립트에서 권한 객체에 접근할 수 있도록 SecurityContext에 대한 JSON 문자열을 반환합니다.</summary>
+            <returns>SecurityContext 객체에 대한 JSON 문자열을 반환합니다.</returns>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.SetACLBit(System.Int32,System.Boolean,System.Int32@)">
+            <summary>확장 권한 정수의 특정 위치의 권한을 설정합니다.</summary>
+            <param name="index">확장 권한 값의 위치입니다.</param>
+            <param name="acl">특정 위치에 해당하는 확장 권한 값입니다.</param>
+            <param name="extACL">확장 권한 정수입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityContext.ToString">
+            <summary>SecurityContext 객체를 문자열로 전환하여 나타냅니다.</summary>
+            <returns>SecurityContext 객체의 값을 반환합니다.</returns>
+            <remarks>문자열 포맷은 C:_ R:_ U:_ D:_ (basic=0x__, ext=0x__, str=___) 입니다.</remarks>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.ACLString">
+            <summary>확장 문자열 권한 값을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanDelete">
+            <summary>SecurityContext 객체에 설정된 삭제(DELETE) 권한을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanInsert">
+            <summary>SecurityContext 객체에 설정된 추가(INSERT) 권한을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanOpen">
+            <summary>SecurityContext 객체에 설정된 화면 Open 권한을 가져옵니다.</summary>
+            <remarks>기본적으로 CRUD 권한 중 한개의 권한이라도 갖으면 Open 권한은 true가 된다.</remarks>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanSave">
+            <summary>SecurityContext 객체에 설정된 저장(SAVE) 권한을 가져옵니다.</summary>
+            <remarks>기본적으로 추가/수정/삭제 권한 중 하나라도 권한이 있다면 저장 권한은 true가 된다.</remarks>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanSelect">
+            <summary>SecurityContext 객체에 설정된 조회(SELECT) 권한을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.CanUpdate">
+            <summary>SecurityContext 객체에 설정된 수정(UPDATE) 권한을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.ExtendedACL">
+            <summary>확장 권한 값을 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.SecurityContext.Item(System.Int32)">
+            <summary>특정 위치(BIT FLAG)의 확장 권한 값을 가져옵니다.</summary>
+            <param name="index">확장 권한 값의 위치입니다.</param>
+        </member>
+        <member name="T:TheOne.Security.SecurityHelper">
+            <summary>원격지에서 보안 정보를 가져오기 위하여 다양한 Helper 메서드를 제공합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.ConvertInt32StringToBitArray(System.String)">
+            <summary>문자열 정수를 BitArray 객체로 변환합니다.</summary>
+            <returns>BitArray 객체를 반환합니다.</returns>
+            <param name="data">정수의 문자열 표현입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.DeserializeAuthInfoFromString(System.String)">
+            <summary>문자열로부터 UserInfoContext 객체를 dserialize 합니다.</summary>
+            <returns>deserialize 된 UserInfoContext 객체 또는 그 파생 클래스의 객체를 반환합니다.</returns>
+            <param name="authInfoString">deserialize 대상이 되는 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.GetAuthMenuListString(System.String,System.String)">
+            <summary>지정된 시스템의 사용자가 갖는 메뉴 권한 목록 문자열을 웹 페이지를 호출하여 가져옵니다.</summary>
+            <returns>권한이 있는 메뉴 ID들의 목록 문자열(콜론으로 구분)을 가져옵니다.</returns>
+            <param name="userid">사용자 ID입니다.</param>
+            <param name="sysID">메뉴 권한 문자열을 얻고자하는 시스템 ID입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.GetButtonSecurityInfoString(System.String,System.String,System.String)">
+            <summary>지정된 사용자, 메뉴 ID에 대한 버튼 권한을 반환합니다.</summary>
+            <returns>버튼 권한 정보에 대한 문자열 배열을 반환합니다.</returns>
+            <param name="userid">사용자 ID입니다.</param>
+            <param name="menuid">메뉴 ID입니다.</param>
+            <param name="sysID">시스템 ID입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.GetMenuSecurityInfoString(System.String,System.String)">
+            <summary>주어진 사용자가 주어진 시스템에 대한 사용자 정보(UserInfoContext객체) 문자열과 메뉴 권한 문자열을 웹 페이지를 호출하여 가져옵니다.</summary>
+            <returns>사용자 정보 문자열과 메뉴 권한 문자열을 담는 문자열 배열(인덱스 0: 사용자 정보, 인덱스 1: 메뉴 권한 문자열)을 반환합니다.</returns>
+            <param name="userid">사용자 ID입니다.</param>
+            <param name="sysID">정보를 얻고자 하는 시스템 ID입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.GetUserInfoContextString(System.String,System.String)">
+            <summary>지정된 시스템의 사용자정보(UserInfoContext객체)의 문자열 데이터를 웹 페이지를 호출하여 가져옵니다.</summary>
+            <returns>UserInfoContext 가 serialize 되고 base64로 인코딩된 문자열을 반환합니다.</returns>
+            <param name="userid">사용자 ID입니다.</param>
+            <param name="sysID">사용자정보를 얻고자 하는 시스템 ID입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.SecurityHelper.SerializeAuthInfoToString(TheOne.Security.UserInfoContext)">
+            <summary>UserInfoContext 객체를 문자열로 serialize 합니다.</summary>
+            <returns>serialize 된 문자열을 문자열을 반환합니다.</returns>
+            <param name="ctx">serialize 대상이 되는 UserInfoContext객체입니다.</param>
+        </member>
+        <member name="F:TheOne.Security.SecurityHelper.CmdAuthMenuList">
+            <summary>SecurityResolve 웹 페이지에 호출을 하여 메뉴 권한 정보를 가져오는 커맨드 상수를 정의합니다.</summary>
+        </member>
+        <member name="F:TheOne.Security.SecurityHelper.CmdBoth">
+            <summary>SecurityResolve 웹 페이지에 호출을 하여 UserInfoContext 정보 및 메뉴 권한 정보를 가져오는 커맨드 상수를 정의합니다.</summary>
+        </member>
+        <member name="F:TheOne.Security.SecurityHelper.CmdButtonSecurityInfo">
+            <summary>SecurityResolve 웹 페이지에 호출을 하여 화면별 버튼 권한 정보를 가져오는 커맨드 상수를 정의합니다.</summary>
+        </member>
+        <member name="F:TheOne.Security.SecurityHelper.CmdUserInfo">
+            <summary>SecurityResolve 웹 페이지에 호출을 하여 UserInfoContext 정보를 가져오는 커맨드 상수를 정의합니다.</summary>
+        </member>
+        <member name="T:TheOne.Security.UserInfoContext">
+            <summary>UserInfoContext 클래스는 사용자 정보를 포함하는 사용자 정보 문맥으로써 현재 스레드에 대한 사용자의 정보를 담고 있습니다.</summary>
+            <remarks>    이 클래스는 사용자 ID 정보를 비롯하여 사용자 정보를 담는 일반적인 사용자 정보 컨테이너 클래스입니다.     인스턴스의 인덱서를 사용하여 사용자 정보를 설정하거나 읽을 수 있으며 이 클래스는 버전에 무관한     serailize 와 deserialize를 제공하기 때문에 인증 여부(로그온 여부)를     판단하는데도 사용될 수 있습니다.     예를 들어, 웹 서비스 호출에 UserInfoContext 인스턴스의 serialize 된 결과 문자열을     전송함으로써 서버측에서 성공적으로 UserInfoContext를 deserialize 한다면 인증된 호출로 판단할     수 있는 것입니다.     UserInfoContext 클래스의 SetUserInfoContext 메서드를 호출하여 현재 스레드의     사용자 정보를 설정할 수 있으며 GetUserInfoContext 메서드를 호출하여 현재 스레드의     사용자 정보를 얻을 수도 있습니다. 대개 SetUserInfoContext 호출은 프레임워크 내부에서     수행되며 일반 개발자는 이 메서드를 호출할 필요가 없습니다.     이 클래스를 상속 받는 경우, 상속한 클래스는 반드시 Serializable 어트리뷰트가 명시 되어야     합니다.          UserInfoContext, 혹은 그 파생 클래스는 프레임워크에서 제공하는 리모팅 메시지 싱크와 SOAP 프록시     Helper 등의 객체를 사용하면 클라이언트의 사용자 정보가 자동으로 서버에 전송됩니다.</remarks>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.#ctor(System.String)">
+            <summary>지정된 사용자 ID를 사용하여 UserInfoContext 클래스의 새 인스턴스를 초기화 합니다.</summary>
+            <param name="userID">CallContext에 기록할 사용자 ID입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.ClearCallContext">
+            <summary>CallContext 정보를 초기화 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.ClearThreadPrincipal">
+            <summary>Thread의 Principal을 제거 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.Deserialize(System.String)">
+            <summary>문자열로부터 UserInfoContext 객체를 deserialize 합니다.</summary>
+            <returns>deserialize 된 UserInfoContext 객체 혹은 그 파생 클래스의 객체를 반환합니다.</returns>
+            <param name="authInfoString">deserialize 대상이 되는 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.Serialize(TheOne.Security.UserInfoContext)">
+            <summary>UserInfoContext 객체를 문자열로 serialize 합니다.</summary>
+            <returns>serialize 된 문자열을 반환합니다.</returns>
+            <param name="ctx">serialize 대상이 되는 UserInfoContext 객체 혹은 파생 클래스의 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.SetThreadPrincipal">
+            <summary>주어진 사용자 ID를 이용하여 스레드의 Principal 객체를 설정합니다.</summary>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.ToString">
+            <summary>ToString()을 오버라이드하여 사용자 정보를 키/값 쌍으로 나타냅니다.</summary>
+            <returns>사용자 정보에 대한 키/값 쌍 형태로 문자열을 반환함니다.</returns>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.VersionIndependantDeserialize(System.String)">
+            <summary>프레임워크 버전에 무관하게 serialize된 문자열로부터 UserInfoContext 객체를 deserialize 한다. 즉, BinaryFormatter를 사용하지 않고 deserialize를 수행합니다.</summary>
+            <returns>deserialize된 결과 UserInfoContext 객체를 반환합니다.</returns>
+            <param name="data">버전에 무관하게 serailize 된 문자열입니다.</param>
+        </member>
+        <member name="M:TheOne.Security.UserInfoContext.VersionIndependantSerialize(TheOne.Security.UserInfoContext)">
+            <summary>프레임워크 버전에 무관하게 문자열로 serialize 합니다. 즉, BinaryFormatter를 사용하지 않고 serialize를 수행합니다.</summary>
+            <returns>serialize된 결과 문자열을 반환합니다.</returns>
+            <param name="ctx">사용자 정보 컨텍스으 입니다.</param>
+        </member>
+        <member name="P:TheOne.Security.UserInfoContext.Current">
+            <summary>현재 스레드에 설정된 사용자 정보 문맥 객체를 가져옵니다.</summary>
+        </member>
+        <member name="P:TheOne.Security.UserInfoContext.Item(System.String)">
+            <summary>지정한 키의 사용자 정보 데이터를 가져오거나 설정합니다.</summary>
+            <param name="key">키입니다.</param>
+        </member>
+        <member name="P:TheOne.Security.UserInfoContext.UserID">
+            <summary>사용자 ID를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="N:TheOne.Text">
+            <summary>TheOne.Text 네임스페이스는 메시지를 관리하기 위한 클래스를 제공하며 별도의 메시지 공급자를 지정할 수 있습니다.</summary>
+        </member>
+        <member name="T:TheOne.Text.MessageManager">
+            <summary>지정한 코드, 언어를 사용하여 메세지를 반환하는 기능을 제공합니다.</summary>
+            <remarks>이 클래스는 NeoDEEX 구성요소 파일의 설정에 따라 MessageProvider 인스턴스를 생성하고, 해당 MessageProvider 인스턴스의 GetMessageDataSet 메서드를 호출하여 XML 데이터를 조회합니다. 그리고 조회된 XML 테이터를 처리해서 내부적으로 메세지 테이블을 구성합니다. 구성된 메세지 테이블을 사용하여 사용자가 요청한 메세지 문자열을 반환합니다. XML 데이터는 DataSet으로 처리되며, DataSet이 인식할 수 있는 형태이어야 합니다. 또한 XML 데이터의 첫번째 열은 카테고리(그룹), 두번째 열은 코드, 세번째 열은 메세지, 네번째 열은 캡션으로 인식합니다. 따라서 XML 데이터를 제공하는 서비스는 그룹, 코드, 메세지, 캡션 순으로 데이터를 구성해서 제공해야 합니다.</remarks>
+        </member>
+        <member name="M:TheOne.Text.MessageManager.GetMessage">
+            <summary>지정한 코드를 사용하여 메시지를 반환합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.MessageManager.GetMessage(System.String)">
+            <summary>지정한 코드를 사용하여 메시지를 반환합니다.</summary>
+            <returns>메시지 문자열을 반환합니다.</returns>
+            <param name="code">메시지 코드입니다.</param>
+        </member>
+        <member name="M:TheOne.Text.MessageManager.GetMessage(System.String,System.String@)">
+            <summary>지정한 코드를 사용하여 메시지와 캡션을 반환합니다.</summary>
+            <returns>메시지 문자열을 반환합니다.</returns>
+            <param name="code">메시지 코드입니다.</param>
+            <param name="caption">반환할 캡션입니다.</param>
+        </member>
+        <member name="M:TheOne.Text.MessageManager.GetMessage(System.String,System.String,System.String@)">
+            <summary>지정한 언어와 코드를 사용하여 메시지와 캡션을 반환합니다.</summary>
+            <returns>메시지 문자열을 반환합니다.</returns>
+            <remarks>    language 코드는 Culture에 해당하는 내용이며, 4자리 코드 대신 2자리 코드만을     사용합니다. 한국어(대한민국)을 의미하는 ko-KR의 경우 국가에 해당하는 코드를 제외한 언어 코드 ko 만을     사용합니다. 영어는 en, 중국어는 zh를 사용합니다.</remarks>
+            <param name="language">언어코드(ko, en, zh) 입니다.</param>
+            <param name="code">메시지 코드입니다.</param>
+            <param name="caption">반환할 캡션입니다.</param>
+        </member>
+        <member name="M:TheOne.Text.MessageManager.GetMessage(System.String,System.String,System.String,System.String@)">
+            <summary>지정한 공급자, 언어, 코드를 사용하여 메시지와 캡션을 반환합니다.</summary>
+            <returns>메시지 문자열을 반환합니다.</returns>
+            <remarks>    language 코드는 Culture에 해당하는 내용이며, 4자리 코드 대신 2자리 코드만을     사용합니다. 한국어(대한민국)을 의미하는 ko-KR의 경우 국가에 해당하는 코드를 제외한 언어 코드 ko 만을     사용합니다. 영어는 en, 중국어는 zh를 사용합니다.     공급자 이름은 NeoDEEX 구성 데이터에 지정된 &lt;provider&gt; 요소의 이름입니다.     지정한 공급자 이름을 NeoDEEX 구성 데이터에서 찾을 수 없는 경우 예외가 발생합니다.</remarks>
+            <param name="name">공급자 이름입니다.</param>
+            <param name="language">언어코드(ko, en, zh) 입니다.</param>
+            <param name="code">메시지 코드입니다.</param>
+            <param name="caption">반환할 캡션입니다.</param>
+        </member>
+        <member name="T:TheOne.Text.MessageProvider">
+            <summary>메세지 공급자를 만드는 클래스에 대한 기본 추상(abstract) 클래스입니다.</summary>
+            <remarks>    MessageManager 클래스는 NeoDEEX 구성 요소 파일의 설정에 따라     MessageProvider에서 파생된 클래스의 인스턴스를 만들고 GetMessageDataSet 메서드를     호출합니다.     MessageProvider 에서 파생된 클래스는 GetMessageDataSet 메서드를 override 하여     구현해야 하며 Parameters 속성을 이용하여 NeoDEEX 구성 데이터에서 지정한 정보를 사용할 수     있습니다. Parameters 속성은 NeoDEEX 구성 데이터의 &lt;parameter&gt; 의 내용으로     구성됩니다.</remarks>
+        </member>
+        <member name="M:TheOne.Text.MessageProvider.GetMessageDataSet(System.String,System.String)">
+            <summary>메세지 테이블을 구성할 수 있는 DataSet 개체를 반환합니다.</summary>
+            <returns>DataSet 객체를 반환합니다.</returns>
+            <remarks>반환된 DataSet 개체는 그룹, 코드, 메세지, 캡션 순서대로 컬럼이 존재해야 합니다. 순서가 잘못되거나 개수가 다른 경우 예외가 발생할 수 있습니다.</remarks>
+            <param name="name">NeoDEEX 구성 파일에서 지정된 메세지 공급자의 이름입니다.</param>
+            <param name="language">언어코드(ko, en...) 입니다.</param>
+        </member>
+        <member name="P:TheOne.Text.MessageProvider.Parameters">
+            <summary>MessageProvider에 전달하는 매개변수 컬렉션을 가져오거나 설정합니다.</summary>
+            <remarks>NeoDEEX 구성 데이터에 지정된 매개변수 설정이 Parameters 속성과 매핑됩니다.</remarks>
+        </member>
+        <member name="T:TheOne.Text.UrlMessageProvider">
+            <summary>NeoDDEX 구성 데이터에 설정된 Url을 사용하여 메세지를 제공하는 공급자 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.UrlMessageProvider.#ctor">
+            <summary>UrlMessageProvider 클래스의 새 인스턴스를 초기화 합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.UrlMessageProvider.GetMessageDataSet(System.String,System.String)">
+            <summary>NeoDEEX 구성 데이터에 설정된 Url 정보를 사용하여 메세지 DataSet을 구성합니다.</summary>
+            <returns>DataSet 객체를 반환합니다.</returns>
+            <remarks>반환된 DataSet 개체는 그룹, 코드, 메세지, 캡션 순서대로 컬럼이 존재해야 합니다. 순서가 잘못되거나 개수가 다른 경우 예외가 발생할 수 있습니다.</remarks>
+            <param name="name">NeoDEEX 구성 데이터에 지정된 메세지 공급자의 이름입니다.</param>
+            <param name="language">언어코드(ko, en...) 입니다.</param>
+        </member>
+        <member name="N:TheOne.Text.Configuration">
+            <summary>TheOne.Text.Configuration 네임스페이스는 구성요소 파일에 메세지 공급자를 설정 할 수 있도록 합니다.</summary>
+        </member>
+        <member name="T:TheOne.Text.Configuration.MessageSection">
+            <summary>메세지 공급자에 대한 설정을 관리합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.MessageSection.#ctor">
+            <summary>MessageSection 클래스의 새 인스턴스를 초기화한다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.MessageSection.Deserialize(System.Xml.XmlReader)">
+            <summary>MessageSection객체를 역직렬화 합니다.</summary>
+            <returns>MessageSection 객체를 반환합니다.</returns>
+            <param name="reader">XmlReader 객체입니다.</param>
+        </member>
+        <member name="M:TheOne.Text.Configuration.MessageSection.Serialize(System.Xml.XmlWriter,TheOne.Text.Configuration.MessageSection)">
+            <summary>MessageSection객체를 직렬화 합니다.</summary>
+            <param name="writer">XmlWriter 객체입니다.</param>
+            <param name="section">MessageSection 객체입니다.</param>
+        </member>
+        <member name="P:TheOne.Text.Configuration.MessageSection.DefaultProvider">
+            <summary>기본 메세지 공급자로 사용할 공급자의 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Text.Configuration.MessageSection.Providers">
+            <summary>메세지 공급자의 컬렉션을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Text.Configuration.MessageSectionFactory">
+            <summary>메세지 공급자 컬렉션 정보들을 관리하는 Factory 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.MessageSectionFactory.Initialize">
+            <summary>MessageSectionFactory를 초기화합니다.</summary>
+            <remarks>NeoDEEX 구성 데이터의 &lt;messageSSection&gt; 의 정보를 이용해서 MessageProvider클래스에서 파생된 객체를 생성하고 초기화합니다.</remarks>
+        </member>
+        <member name="P:TheOne.Text.Configuration.MessageSectionFactory.MessageSection">
+            <summary>MessageSection 객체를 가져옵니다.</summary>
+        </member>
+        <member name="T:TheOne.Text.Configuration.ParameterSetting">
+            <summary>메세지 공급자에에 전달되는 매개변수의 이름과 값을 저장하는 클래스입니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.ParameterSetting.#ctor">
+            <summary>ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.ParameterSetting.#ctor">
+            <summary>ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.ParameterSetting.#ctor(System.String,System.String)">
+            <summary>지정된 이름과 값을 사용하여 ParameterSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+            <param name="name">이름 입니다.</param>
+            <param name="value">값 입니다.</param>
+        </member>
+        <member name="P:TheOne.Text.Configuration.ParameterSetting.Name">
+            <summary>메세지 공급자에 전달되는 매개변수의 이름를 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Text.Configuration.ParameterSetting.Value">
+            <summary>메세지 공급자에 전달되는 매개변수의 값을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="T:TheOne.Text.Configuration.ProviderSetting">
+            <summary>NeoDEEX 구성 데이터에 메세지 공급자 정보를 설정합니다.</summary>
+        </member>
+        <member name="M:TheOne.Text.Configuration.ProviderSetting.#ctor">
+            <summary>ProviderSetting클래스의 새 인스턴스를 초기화합니다.</summary>
+        </member>
+        <member name="P:TheOne.Text.Configuration.ProviderSetting.Name">
+            <summary>메세지 공급자의 이름을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Text.Configuration.ProviderSetting.Parameters">
+            <summary>메세지 공급자에 전달하는 매개변수 컬렉션을 가져오거나 설정합니다.</summary>
+        </member>
+        <member name="P:TheOne.Text.Configuration.ProviderSetting.Type">
+            <summary>메세지 공급자의 클래스 타입정보를 가져오거나 설정합니다.</summary>
+        </member>
+    </members>
+</doc>
