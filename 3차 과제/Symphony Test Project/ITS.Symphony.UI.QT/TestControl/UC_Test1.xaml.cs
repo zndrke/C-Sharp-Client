@@ -49,7 +49,7 @@ namespace ITS.Symphony.UI.QT.TestControl
         {
             InitializeComponent();
             this.xamDataGrid1.Initialize();
-
+            
             ObservableCollection<Book_Data> datasource = new ObservableCollection<Book_Data>();
 
             datasource.Add(new Book_Data("WPF 프로그래밍", "이", "가메", 1, "20101213", "이것은", Category.경제, 0.3));
@@ -58,7 +58,6 @@ namespace ITS.Symphony.UI.QT.TestControl
             datasource.Add(new Book_Data("OOP", "게리", "Relly", 22012, "19121216", "객체지향", Category.문학, - 0.702));
             this.xamDataGrid1.DataSource = datasource;
         }
-    
         public class Book_Data
         {
             public string sTitle { get; set; }
@@ -82,7 +81,6 @@ namespace ITS.Symphony.UI.QT.TestControl
                 this.dRate = dRate;
             }
         }
-
         private void ShowFilter_Click (object sender, RoutedEventArgs e)
         {
             if (this.xamDataGrid1.FieldSettings.AllowRecordFiltering != true) {   
@@ -121,7 +119,6 @@ namespace ITS.Symphony.UI.QT.TestControl
             }
             return sResult;
         }
- 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             return value;

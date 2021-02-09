@@ -286,6 +286,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CustomizationHelperQT.cs" />
+    <Compile Include="TestControl\m2785.cs" />
     <Compile Include="TestControl\UC_Test1.xaml.cs">
       <DependentUpon>UC_Test1.xaml</DependentUpon>
     </Compile>
