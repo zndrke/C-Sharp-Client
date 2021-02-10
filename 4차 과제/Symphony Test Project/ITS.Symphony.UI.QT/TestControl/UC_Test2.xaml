@@ -1,0 +1,45 @@
+﻿<base:UserControlBase 
+    x:Class="ITS.Symphony.UI.QT.TestControl.UC_Test2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:igDP="http://infragistics.com/DataPresenter"
+    xmlns:igEditors="http://infragistics.com/Editors"
+    xmlns:itsEditor="clr-namespace:ITS.Symphony.Common;assembly=ITS.Symphony.Common"
+	xmlns:cmExt="clr-namespace:ITS.Symphony.Common.Extensions;assembly=ITS.Symphony.Common"
+	xmlns:cmCvt="clr-namespace:ITS.Symphony.Common.Converter;assembly=ITS.Symphony.Common"
+	xmlns:base="clr-namespace:ITS.Symphony.Common.Base;assembly=ITS.Symphony.Common"
+	xmlns:cc="clr-namespace:ITS.Symphony.Controls;assembly=ITS.Symphony.Controls"
+    xmlns:local="clr-namespace:ITS.Symphony.UI.QT.TestControl">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "auto"/>
+            <RowDefinition Height = "auto"/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <local:UserConverter x:Key="UserConverter"/>
+        </Grid.Resources>
+        <Button Grid.Row="0" x:Name="btnUserFilter" Content="Filter" Click="UserFilter_Click" Width="100" Height="30" HorizontalAlignment="Right"/>
+        <igDP:XamDataGrid x:Name="xdgUser" Grid.Row="1">
+            <igDP:XamDataGrid.FieldSettings>
+                <igDP:FieldSettings AllowRecordFiltering="False"/>
+            </igDP:XamDataGrid.FieldSettings>
+            <igDP:XamDataGrid.FieldLayouts>
+                <igDP:FieldLayout>
+                    <igDP:FieldLayout.Fields>
+                        <igDP:Field Name="Id" Label="ID"/>
+                        <igDP:Field Name="Name" Label="Name"/>
+                        <igDP:Field Name="TeamName" Label="Dept/Team"/>
+                        <igDP:Field Name="DeskCode" Label="Desk" Converter="{StaticResource UserConverter}" ConverterParameter="496"/>
+                        <igDP:Field Name="UserNo" Label="Emp.No"/>
+                        <igDP:Field Name="JobTitle" Label="Job Title"/>
+                        <igDP:Field Name="Tel" Label="Tel."/>
+                        <igDP:Field Name="Status" Label="Status" Converter="{StaticResource UserConverter}" ConverterParameter="500"/>
+                        <igDP:Field Name="RepUserYN" Label="Representative" AllowEdit="True"/>
+                    </igDP:FieldLayout.Fields>
+                </igDP:FieldLayout>
+            </igDP:XamDataGrid.FieldLayouts>
+        </igDP:XamDataGrid>
+    </Grid>
+</base:UserControlBase>

@@ -1,0 +1,528 @@
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+c:\users\yhkim\documents\visual studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+C:\Users\yhkim\Documents\Visual Studio 2010\Projects\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+\\ITSFS\Users\yhkim\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ciloci.Flee.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\DocX.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\EPPlus.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.ExcelExporter.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataVisualization.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DockManager.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Core.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Excel.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DragDrop.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Editors.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Reporting.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Ribbon.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.v19.1.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.FnpCommon.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Plugin.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.AM.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CM.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CS.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FI.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FR.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.IM.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Newtonsoft.Json.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\PdfFileWriter.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\SautinSoft.HtmlToRtf.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\EPPlus.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.xml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.P2.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FX.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YA.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YB.dll
+D:\03.Work\ITS.Symphony.UI.QT\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YZ.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ciloci.Flee.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\DocX.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.ExcelExporter.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataVisualization.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DockManager.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Core.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Excel.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DragDrop.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Editors.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Reporting.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Ribbon.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.v19.1.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.FnpCommon.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Plugin.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.AM.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CM.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CS.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FI.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FR.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.IM.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.P2.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FX.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YA.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YB.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YZ.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\PdfFileWriter.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\SautinSoft.HtmlToRtf.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.xml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\cyshin\Desktop\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.lref
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ciloci.Flee.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\DocX.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.ExcelExporter.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataVisualization.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DockManager.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Core.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Excel.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DragDrop.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Editors.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Reporting.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Ribbon.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.v19.1.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.FnpCommon.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Plugin.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.AM.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CM.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CS.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FI.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FR.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.IM.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.P2.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FX.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YA.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YB.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YZ.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Newtonsoft.Json.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\PdfFileWriter.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\SautinSoft.HtmlToRtf.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.xml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.lref
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+\\ITSFS\Projects\개발운영부(신)\(1000) Management\(1100) Schedule\(1190) 교육일정\발표자료\신창용\클라이언트\3차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe.config
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.exe
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.QT.pdb
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.Data.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ChartFX.WPF.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ciloci.Flee.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\DocX.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.ExcelExporter.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataPresenter.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DataVisualization.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DockManager.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Core.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Documents.Excel.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.DragDrop.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Editors.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Reporting.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.Ribbon.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\InfragisticsWPF4.v19.1.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Common.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.FnpCommon.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Plugin.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Report.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Resources.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.AM.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CM.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.CS.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.DM.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FI.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.FR.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.IM.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.JS.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MAIN.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.MI.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.P2.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PA.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PC.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PO.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.Common.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.CR.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.EQ.OPT.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FI.NTS.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.FX.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.HB.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.CFL.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.PR.IR.NTS.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.RE.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SA.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.SC.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TC.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TM.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.TR.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.US.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YA.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YB.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.UI.YZ.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Extensibility.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Microsoft.Windows.Design.Interaction.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\PdfFileWriter.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\SautinSoft.HtmlToRtf.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ephtmltopdf.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\EPPlus.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\Ionic.Zlib.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Controls.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Core.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ITS.Symphony.Entity.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\OneCorLib.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\TheOne.Windows.xml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Extensibility.resources.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\bin\Debug\ko\Microsoft.Windows.Design.Interaction.resources.dll
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csprojResolveAssemblyReference.cache
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.baml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.baml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.baml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\LoginWin.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\MainWindow.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\App.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.cache
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT_MarkupCompile.lref
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test1.baml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\TestControl\UC_Test2.baml
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.g.resources
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.Properties.Resources.resources
+C:\Users\cyshin\Desktop\클라이언트\4차 과제\Symphony Test Project\ITS.Symphony.UI.QT\obj\x86\Debug\ITS.Symphony.UI.QT.csproj.GenerateResource.Cache

@@ -1,0 +1,55 @@
+﻿<base:UserControlBase 
+    x:Class="ITS.Symphony.UI.QT.TestControl.UC_Test1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:igDP="http://infragistics.com/DataPresenter"
+    xmlns:igEditors="http://infragistics.com/Editors"
+    xmlns:itsEditor="clr-namespace:ITS.Symphony.Common;assembly=ITS.Symphony.Common"
+	xmlns:cmExt="clr-namespace:ITS.Symphony.Common.Extensions;assembly=ITS.Symphony.Common"
+	xmlns:cmCvt="clr-namespace:ITS.Symphony.Common.Converter;assembly=ITS.Symphony.Common"
+	xmlns:base="clr-namespace:ITS.Symphony.Common.Base;assembly=ITS.Symphony.Common"
+	xmlns:cc="clr-namespace:ITS.Symphony.Controls;assembly=ITS.Symphony.Controls"
+    xmlns:local="clr-namespace:ITS.Symphony.UI.QT.TestControl">
+    
+    <Grid >
+        <Grid.Resources>
+            <local:StringFormatConverter x:Key="StringFormatConverter"/>
+        </Grid.Resources>
+        
+        <igDP:XamDataGrid Name="xamDataGrid1">
+            <igDP:XamDataGrid.FieldSettings>
+                <igDP:FieldSettings AllowRecordFiltering="False"/>
+            </igDP:XamDataGrid.FieldSettings>
+            <igDP:XamDataGrid.FieldLayouts>
+                <igDP:FieldLayout>
+                    <igDP:FieldLayout.Fields>
+                        <igDP:UnboundField Name="bCheck" BindingPath="bCheck" Label="체크박스" AllowEdit="True">
+                            <igDP:UnboundField.Settings>
+                                <igDP:FieldSettings
+                                EditorType="{x:Type igEditors:XamCheckEditor}"/>
+                            </igDP:UnboundField.Settings>
+                        </igDP:UnboundField>
+                        <igDP:Field Name="sTitle" Label="제목"/>
+                        <igDP:Field Name="sWriter" Label="저자"/>
+                        <igDP:Field Name="sPublisher" Label="출판사"/>
+                        <igDP:UnboundField Name="iPage" BindingPath="iPage" Label="페이지수" Converter="{StaticResource StringFormatConverter}" ConverterParameter="iPage"/>
+                        <igDP:DateTimeField Name="sDate" Label="출판일" AllowEdit="True"/>         
+                        <igDP:Field Name="sInfo" Label="정보"/>
+                        <igDP:Field Name="eCategory" Label="분류" AllowEdit="True">
+                            <igDP:Field.Settings>
+                                <igDP:FieldSettings EditorType="{x:Type igEditors:XamComboEditor}">
+                                    <igDP:FieldSettings.EditorStyle>
+                                        <Style TargetType="{x:Type igEditors:XamComboEditor}"/>
+                                    </igDP:FieldSettings.EditorStyle>
+                                </igDP:FieldSettings>
+                            </igDP:Field.Settings>
+                        </igDP:Field>
+                        <igDP:UnboundField BindingPath="dRate" Name="dRate" Label="판매율" Converter="{StaticResource StringFormatConverter}" ConverterParameter="dRate"/>
+                    </igDP:FieldLayout.Fields>
+                </igDP:FieldLayout>
+            </igDP:XamDataGrid.FieldLayouts>
+        </igDP:XamDataGrid>
+        <Button x:Name="btnShowFilter" Content="필터보이기" Click="ShowFilter_Click" Width="100" Height="30" HorizontalAlignment="Left"/>
+    </Grid>
+</base:UserControlBase>
