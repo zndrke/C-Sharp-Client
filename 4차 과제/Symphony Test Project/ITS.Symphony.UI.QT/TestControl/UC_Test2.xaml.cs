@@ -61,6 +61,10 @@ namespace ITS.Symphony.UI.QT.TestControl
         }
         private void Receive_6022 (EntityBase entity)
         {
+            if (entity == null) {
+                return;
+            }
+
             var msg = entity as UserList;
             this.xdgUser.DataSource = msg.User;
         }
@@ -71,10 +75,14 @@ namespace ITS.Symphony.UI.QT.TestControl
             base.requestClientArea = (new SspAccess()).SendMessage<DummyMsg>(6022, msg, typeof(UserList), this);
         }
     }
-    public class UserConverter : IValueConverter
+    public class UserMsgConverter : IValueConverter
     {
         public object Convert (object value, Type targetType, object parameter, CultureInfo culture)
         {
+            if (value == null || parameter == null) {
+                return null;
+            }
+
             if (parameter.Equals("496")) {
                 if (value.Equals("F")) {
                     return "Front";

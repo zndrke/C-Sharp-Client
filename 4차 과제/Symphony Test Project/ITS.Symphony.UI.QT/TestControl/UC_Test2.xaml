@@ -13,31 +13,33 @@
     xmlns:local="clr-namespace:ITS.Symphony.UI.QT.TestControl">
     
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height = "auto"/>
-            <RowDefinition Height = "auto"/>
-        </Grid.RowDefinitions>
         <Grid.Resources>
-            <local:UserConverter x:Key="UserConverter"/>
+            <local:UserMsgConverter x:Key="UserMsgConverter"/>
         </Grid.Resources>
-        <Button Grid.Row="0" x:Name="btnUserFilter" Content="Filter" Click="UserFilter_Click" Width="100" Height="30" HorizontalAlignment="Right"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" x:Name="btnUserFilter" Content="Filter" Click="UserFilter_Click" Margin="10" Width="100" Height="30" HorizontalAlignment="Right"/>
         <igDP:XamDataGrid x:Name="xdgUser" Grid.Row="1">
             <igDP:XamDataGrid.FieldSettings>
                 <igDP:FieldSettings AllowRecordFiltering="False"/>
             </igDP:XamDataGrid.FieldSettings>
             <igDP:XamDataGrid.FieldLayouts>
                 <igDP:FieldLayout>
+                    
                     <igDP:FieldLayout.Fields>
                         <igDP:Field Name="Id" Label="ID"/>
                         <igDP:Field Name="Name" Label="Name"/>
                         <igDP:Field Name="TeamName" Label="Dept/Team"/>
-                        <igDP:Field Name="DeskCode" Label="Desk" Converter="{StaticResource UserConverter}" ConverterParameter="496"/>
+                        <igDP:Field Name="DeskCode" Label="Desk" Converter="{StaticResource UserMsgConverter}" ConverterParameter="496"/>
                         <igDP:Field Name="UserNo" Label="Emp.No"/>
                         <igDP:Field Name="JobTitle" Label="Job Title"/>
                         <igDP:Field Name="Tel" Label="Tel."/>
-                        <igDP:Field Name="Status" Label="Status" Converter="{StaticResource UserConverter}" ConverterParameter="500"/>
+                        <igDP:Field Name="Status" Label="Status" Converter="{StaticResource UserMsgConverter}" ConverterParameter="500"/>
                         <igDP:Field Name="RepUserYN" Label="Representative" AllowEdit="True"/>
                     </igDP:FieldLayout.Fields>
+                    
                 </igDP:FieldLayout>
             </igDP:XamDataGrid.FieldLayouts>
         </igDP:XamDataGrid>
